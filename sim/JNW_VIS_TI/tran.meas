@@ -5,10 +5,19 @@ load {cicname}.raw
 
 echo "MEAS_START"
 
-let i_out = i(VSENS)
+#ifdef Nosweep
+foreach vtemp 27
+#else
+foreach vtemp {temp_sweep}
+#endif
 
-meas tran i_temp find i_out at=80n
-meas tran vref find v(VREF) at=80n
+    set fend = .raw
+    load {cicname}_$vtemp$fend
+
+    meas tran i_temp$vtemp find i(VSENS) at=45n
+    meas tran vref$vtemp find v(VREF) at=45n
+
+end
 
 echo "MEAS_END"
 .endc
