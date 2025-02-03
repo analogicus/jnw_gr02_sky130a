@@ -12,9 +12,10 @@ email: anon@anon.com
 url: analogicus.github.io
 doc:
   # Make docs
-  #libraries:
-  #   <library>:
-  #       - <cell>
+  libraries:
+    JNW_EX_SKY130A:
+         - JNW_VIS_TI
   #       - <cell>
 sim:
+    JNW_VIS_TI: make typical
   # <simdir>: command
