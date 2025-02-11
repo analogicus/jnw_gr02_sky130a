@@ -88,7 +88,7 @@ C {devices/ipin.sym} -220 -140 0 0 {name=p4 lab=VIP
 }
 C {devices/ipin.sym} 90 -140 0 1 {name=p5 lab=VIN}
 C {devices/ipin.sym} -550 20 0 0 {name=p3 lab=VSS}
-C {JNW_TR_SKY130A/JNWTR_RPPO2.sym} -440 -450 1 0 {name=x10[0:1]}
+C {JNW_TR_SKY130A/JNWTR_RPPO2.sym} -440 -450 1 0 {name=x10[1:0]}
 C {devices/opin.sym} 260 -180 0 0 {name=p2 lab=VOUT}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -190 -530 0 1 {name=x10 }
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -270 -320 0 1 {name=x7 }
