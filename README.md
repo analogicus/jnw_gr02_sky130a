@@ -14,8 +14,8 @@ Group2
 
 **JNW_VIS_TI - Temperature to current conversion module**  
 - First step in making the temperature sensor for AIC2025 course.  
-- The module generates the current with linear change dependent on the temperature. It works from -50 to 150 degrees Celsius - check the plot image.  
-- The module also generates a "stable" voltage reference of around 1.2V.  
+- The module generates the current with linear change dependent on the temperature. It works from -40 to 130 degrees Celsius - check the plot image.  
+- The module also generates a "stable" voltage reference of around 1.15V.  
 
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/Figure_1_GoodLinearity.png?raw=true)
 
@@ -30,7 +30,7 @@ Group2
 - Designed an OPAMP - similar tactics as above.  
 - Taking care to be in `gmid = 10` with all the transistors.  
 - To fine-tune the reference voltage, we played with resistances.  
-- More current, fewer problems looks like the answer to life :)  
+- "More current, fewer problems" looks like the answer to life :)  
 
 
 # What
@@ -54,7 +54,7 @@ Group2
 | VDD_1V8         | Input     | VDD_1V8 | Main supply                              |
 | VSS         | Input     | Ground  |                                           |
 | PWRUP_1V8     | Input    | VDD_1V8 | Power up the circuit                       |
-| VREF     | Output    | VDD_1V8 | Voltage referance of around 1.2V                       |
+| VREF     | Output    | VDD_1V8 | Voltage referance of around 1.15V                       |
 | ISENS     | Output    | VDD_1V8 | Current dependant on the temperature                       |
 
 
@@ -64,4 +64,4 @@ Group2
 | :---                | :---:     | :---:           | :---:     | :---: |
 | Technology          |         | Skywater 130 nm |         |       |
 | AVDD                | 1.7    | 1.8           | 1.9    | V     |
-| Temperature         | -40     | 27            | 125     | C     |
+| Temperature         | -40     | 27            | 130     | C     |
