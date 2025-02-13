@@ -5,7 +5,7 @@
 *.opin VREF
 *.opin I_TEMP
 *.ipin PWR_UP
-x1 VDD VREF I_TEMP PWR_UP VSS JNW_VIS_TI
+x1 VDD VREF net1 net1 I_TEMP PWR_UP VSS JNW_VIS_TI
 **** begin user architecture code
 
 
@@ -23,7 +23,7 @@ VSS  VSS  0     dc 0
 VDD  VDD VSS dc 1.8
 VPUP PWR_UP VSS PULSE ( 0 1.8 1NS 1PS 1PS 1NS 1S 1)
 VSENS I_TEMP 0 dc 0.5
-.option temp = 100
+.option temp = 25
 .option savecurrents
 .save all
 .control
@@ -41,20 +41,22 @@ exit
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  JNW_GR02_SKY130A/JNW_VIS_TI.sym # of pins=5
+* expanding   symbol:  JNW_GR02_SKY130A/JNW_VIS_TI.sym # of pins=7
 ** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_GR02_SKY130A/JNW_VIS_TI.sym
 ** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_GR02_SKY130A/JNW_VIS_TI.sch
-.subckt JNW_VIS_TI VDD VREF I_TEMP PWR_UP VSS
+.subckt JNW_VIS_TI VDD VREF LPI LPO I_TEMP PWR_UP VSS
 *.ipin VDD
 *.ipin VSS
 *.opin VREF
 *.opin I_TEMP
 *.ipin PWR_UP
+*.opin LPI
+*.opin LPO
 XQ1 VSS VSS VIN sky130_fd_pr__pnp_05v5_W3p40L3p40 m=1 mult=1
 XQ2 VSS VSS net2 sky130_fd_pr__pnp_05v5_W3p40L3p40 m=8 mult=8
-x7 VDD VIN VIP VSS VOUT JNW_VIS_OTA
-x11 VDD PWR_UP VOUT VSS JNWATR_NCH_12C1F2
-x1<0> VOUT VSS JNWTR_CAPX1
+x7 VDD VIN VIP VSS LPO JNW_VIS_OTA
+x11 VDD PWR_UP LPI VSS JNWATR_NCH_12C1F2
+x1<0> LPI VSS JNWTR_CAPX1
 x5<0> VIP VREF VSS JNWTR_RPPO8
 x5<1> VIP VREF VSS JNWTR_RPPO8
 x8<0> net2 VIP VSS JNWTR_RPPO4
@@ -67,7 +69,7 @@ x1 net1 net1 VDD VDD JNWATR_PCH_8C1F2
 x2 VIN net1 VDD VDD JNWATR_PCH_8C1F2
 x3 VREF net1 VDD VDD JNWATR_PCH_8C1F2
 x4 I_TEMP net1 VDD VDD JNWATR_PCH_8C1F2
-x6 net1 VOUT VSS VSS JNWATR_NCH_8C5F0
+x6 net1 LPI VSS VSS JNWATR_NCH_8C5F0
 .ends
 
 

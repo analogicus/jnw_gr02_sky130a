@@ -4,13 +4,14 @@ K {}
 V {}
 S {}
 E {}
-N -130 -80 -120 -80 {lab=VDD}
-N -130 -60 -120 -60 {lab=PWR_UP}
-N -130 -40 -120 -40 {lab=VSS}
-N 180 -60 190 -60 {lab=I_TEMP}
-N 190 -60 200 -60 {lab=I_TEMP}
-N 200 -60 205 -60 {lab=I_TEMP}
-N 180 -80 205 -80 {lab=VREF}
+N -130 -70 -120 -70 {lab=PWR_UP}
+N 180 -30 190 -30 {lab=I_TEMP}
+N 190 -30 200 -30 {lab=I_TEMP}
+N 200 -30 205 -30 {lab=I_TEMP}
+N 180 -90 205 -90 {lab=VREF}
+N -130 -50 -120 -50 {lab=VSS}
+N -130 -90 -120 -90 {lab=VDD}
+N 180 -70 180 -50 {lab=#net1}
 C {JNW_GR02_SKY130A/JNW_VIS_TI.sym} 30 -60 0 0 {name=x1}
 C {devices/simulator_commands_shown.sym} 430 -200 0 0 {name=COMMANDS
 simulator=ngspice
@@ -29,7 +30,7 @@ VSS  VSS  0     dc 0
 VDD  VDD VSS dc 1.8 
 VPUP PWR_UP VSS PULSE ( 0 1.8 1NS 1PS 1PS 1NS 1S 1)
 VSENS I_TEMP 0 dc 0.5
-.option temp = 100
+.option temp = 25
 .option savecurrents
 .save all
 .control
@@ -43,10 +44,10 @@ exit
 .end
 
 "}
-C {devices/ipin.sym} -130 -80 0 0 {name=p1 lab=VDD}
-C {devices/ipin.sym} -130 -40 0 0 {name=p2 lab=VSS
+C {devices/ipin.sym} -130 -90 0 0 {name=p1 lab=VDD}
+C {devices/ipin.sym} -130 -50 0 0 {name=p2 lab=VSS
 }
-C {devices/opin.sym} 205 -80 0 0 {name=p3 lab=VREF}
-C {devices/opin.sym} 205 -60 0 0 {name=p4 lab=I_TEMP}
-C {devices/ipin.sym} -130 -60 0 0 {name=p5 lab=PWR_UP
+C {devices/opin.sym} 205 -90 0 0 {name=p3 lab=VREF}
+C {devices/opin.sym} 205 -30 0 0 {name=p4 lab=I_TEMP}
+C {devices/ipin.sym} -130 -70 0 0 {name=p5 lab=PWR_UP
 }

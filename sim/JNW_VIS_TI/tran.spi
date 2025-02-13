@@ -11,7 +11,7 @@
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
-.option TNOM=27 GMIN=1e-15 reltol=1e-3
+.option TNOM=27 GMIN=1e-15 reltol=1e-3 method=gear
 
 *-----------------------------------------------------------------
 * PARAMETERS
@@ -27,6 +27,8 @@ VSS  VSS  0     dc 0
 VDD  VDD VSS dc 1.8 
 VPUP PWR_UP VSS PULSE ( 0 1.8 1NS 1PS 1PS 1NS 1S 1)
 VSENS I_TEMP 0 dc 0.5
+
+RSH LPO LPI 1u
 
 *-----------------------------------------------------------------
 * DUT
@@ -53,12 +55,12 @@ optran 0 0 0 1n 1u 0
 set fend = .raw
 #ifdef Nosweep
     option temp=27
-    tran 10p 80n 0.1p
+    tran 1n 80n 1p
     write
 #else
     foreach vtemp {temp_sweep}
         option temp=$vtemp
-        tran 1p 80n 0.1p
+        tran 1n 80n 1p
         write {cicname}_$vtemp$fend
     end
 #endif

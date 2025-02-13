@@ -17,5 +17,5 @@ doc:
          - JNW_VIS_TI
   #       - <cell>
 sim:
-    JNW_VIS_TI: make typical
+    JNW_VIS_TI: make typical && make summary
   # <simdir>: command
