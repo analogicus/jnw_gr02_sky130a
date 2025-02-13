@@ -14,31 +14,36 @@ def main(name):
   fname = name +".png"
   print(f"Saving {fname}")
 
-  Temp = [-25, 0, 25, 50, 75, 100]
-
+  Temp = [-40, -30, -20, -10, 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130]
   # Initialize empty lists
   current = []
   vref = []
 
-  # Iterate through the dictionary and separate the values
-  for key, value in obj.items():
-    if key.startswith('i_temp'):
-      current.append(value)
-    elif key.startswith('vref'):
-      vref.append(value)
+  i_temp_data = {k: v for k, v in obj.items() if k.startswith("i_temp")}
+  vref_data = {k: v for k, v in obj.items() if k.startswith("vref")}
 
-  current.append(current.pop(2))  # Move 3rd entry (index 2) to the end
-  vref.append(vref.pop(2))        # Move 3rd entry (index 2) to the end
+  # Sort i_temp_data by temperature and extract values
+  sorted_i_temp_values = [v for k, v in sorted(i_temp_data.items(), key=lambda x: int(x[0].replace("i_temp", "")))]
+
+  # Sort vref_data by temperature and extract values
+  sorted_vref_values = [v for k, v in sorted(vref_data.items(), key=lambda x: int(x[0].replace("vref", "")))]
+
+
+  print(sorted_i_temp_values)
 
   fig, axs = plt.subplots(2, 1, figsize=(10, 8))
 
-  axs[0].plot(Temp, current)
+  axs[0].plot(Temp, sorted_i_temp_values, 'bo-')
   axs[0].set_title("Temperature current")
 
-  axs[1].plot(Temp, vref)
+  axs[1].plot(Temp, sorted_vref_values, 'ro-')
   axs[1].set_title("Vref")
 
+  axs[0].grid(True, linestyle='--', alpha=0.6)
+  axs[1].grid(True, linestyle='--', alpha=0.6)
+
   plt.tight_layout()
+  
   plt.show()
 
   print(vref)
