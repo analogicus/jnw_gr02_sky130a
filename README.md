@@ -11,23 +11,26 @@ Group2
 # Why
 
 <explain why you made this module>
-JNW_VIS_TI - Temperature to current conversion module
-    First step in making the temperature sensor for AIC2025 course
-    The module generates the current with linear change dependant on the temperature, it works from -50 to 150 deegres celsius - check the plot image
-    The module also generates a "stable" voltage referance of around 1.2V
 
-    ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/Figure_1_GoodLinearity.png?raw=true)
-    
+**JNW_VIS_TI - Temperature to current conversion module**  
+- First step in making the temperature sensor for AIC2025 course.  
+- The module generates the current with linear change dependent on the temperature. It works from -50 to 150 degrees Celsius - check the plot image.  
+- The module also generates a "stable" voltage reference of around 1.2V.  
+
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/Figure_1_GoodLinearity.png?raw=true)
+
+---
 
 # How
 
 <explain short how you made this module>
-JNW_VIS_TI - Temperature to current conversion module
-    Following the class and copying the design :)
-    Designed an OPAMP - similar tactics as above
-    Taking care to be in gmid = 10 with all the transistors
-    To fine tune the referance voltage we have played with resistances
-    More current less problems looks like the answer to life :)
+
+**JNW_VIS_TI - Temperature to current conversion module**  
+- Following the class and copying the design :)  
+- Designed an OPAMP - similar tactics as above.  
+- Taking care to be in `gmid = 10` with all the transistors.  
+- To fine-tune the reference voltage, we played with resistances.  
+- More current, fewer problems looks like the answer to life :)  
 
 
 # What
