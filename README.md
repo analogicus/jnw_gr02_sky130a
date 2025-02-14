@@ -16,6 +16,7 @@ Group2
 - First step in making the temperature sensor for AIC2025 course.  
 - The module generates the current with linear change dependent on the temperature. It works from -40 to 130 degrees Celsius - check the plot image.  
 - The module also generates a "stable" voltage reference of around 1.15V.  
+- For the nice plot you need to comment out the **return** in the `jnw_gr02_sky130a/sim/JNW_VIS_TI` and run the `make tempsweep` - it will take a while...  
 
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/Figure_1_GoodLinearity.png?raw=true)
 
@@ -26,10 +27,18 @@ Group2
 | 4.5765 MHz       |  -6.6304   |  25.399    |  41.874   | 87.122 MHz |
 
 - **LOOP GAIN**  
-![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/output_lstb/lstb_schgtkttttvtnosweep_loop_gain.png?raw=true)
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/output_lstb/lstb_schgtkttttvtnosweep_loop_gain.png?raw=true)  
 
 - **LOOP PHASE**  
-![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/output_lstb/lstb_schgtkttttvtnosweep_loop_phase.png?raw=true)
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/output_lstb/lstb_schgtkttttvtnosweep_loop_phase.png?raw=true)  
+
+- DC analysis is a bit funky, it changes with the moon phases... current doesn't really compare to the tran analysis, vref is quite similar  
+
+- **VREF**
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/output_dc/vref_dc_plot.png?raw=true)  
+
+- **I_TEMP**
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/output_dc/isens_dc_plot.png?raw=true)  
 
 ---
 
