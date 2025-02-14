@@ -27,18 +27,18 @@ Group2
 | 4.5765 MHz       |  -6.6304   |  25.399    |  41.874   | 87.122 MHz |
 
 - **LOOP GAIN**  
-![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/output_lstb/lstb_schgtkttttvtnosweep_loop_gain.png?raw=true)  
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/lstb_schgtkttttvtnosweep_loop_gain.png?raw=true)  
 
 - **LOOP PHASE**  
-![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/output_lstb/lstb_schgtkttttvtnosweep_loop_phase.png?raw=true)  
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/lstb_schgtkttttvtnosweep_loop_phase.png?raw=true)  
 
 - DC analysis is a bit funky, it changes with the moon phases... current doesn't really compare to the tran analysis, vref is quite similar  
 
 - **VREF**
-![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/output_dc/vref_dc_plot.png?raw=true)  
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/vref_dc_plot.png?raw=true)  
 
 - **I_TEMP**
-![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/output_dc/isens_dc_plot.png?raw=true)  
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/isens_dc_plot.png?raw=true)  
 
 ---
 
