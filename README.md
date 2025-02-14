@@ -19,6 +19,18 @@ Group2
 
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/Figure_1_GoodLinearity.png?raw=true)
 
+- Bellow are the plots and data of stability analysis  
+
+| f3db            |  gm_db | lf_gain | pm_deg | ug  |
+| :-              |  :-:   |  :-:    |  :-:   | :-: |
+| 4.5765 MHz       |  -6.6304   |  25.399    |  41.874   | 87.122 MHz |
+
+- **LOOP GAIN**  
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/output_lstb/lstb_schgtkttttvtnosweep_loop_gain.png?raw=true)
+
+- **LOOP PHASE**  
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/output_lstb/lstb_schgtkttttvtnosweep_loop_phase.png?raw=true)
+
 ---
 
 # How
@@ -30,7 +42,7 @@ Group2
 - Designed an OPAMP - similar tactics as above.  
 - Taking care to be in `gmid = 10` with all the transistors.  
 - To fine-tune the reference voltage, we played with resistances.  
-- "More current, fewer problems" looks like the answer to life :)  
+- **"More current, fewer problems"** looks like the answer to life :)  
 
 
 # What

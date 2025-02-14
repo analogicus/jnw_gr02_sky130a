@@ -1,11 +1,13 @@
 ** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_GR02_SKY130A/TB_JNW_VIS_TI.sch
-**.subckt TB_JNW_VIS_TI VDD VSS VREF I_TEMP PWR_UP
+**.subckt TB_JNW_VIS_TI VDD VSS VREF I_TEMP PWR_UP LPI LPO
 *.ipin VDD
 *.ipin VSS
 *.opin VREF
 *.opin I_TEMP
 *.ipin PWR_UP
-x1 VDD VREF net1 net1 I_TEMP PWR_UP VSS JNW_VIS_TI
+*.opin LPI
+*.opin LPO
+x1 VDD VREF LPI LPO I_TEMP PWR_UP VSS JNW_VIS_TI
 **** begin user architecture code
 
 
@@ -18,6 +20,9 @@ x1 VDD VREF net1 net1 I_TEMP PWR_UP VSS JNW_VIS_TI
 .lib ../../../tech/ngspice/temperature.spi Tl
 .lib ../../../tech/ngspice/supply.spi Vl
 .include ../../../../cpdk/ngspice/ideal_circuits.spi
+.include /home/domen/pro/aicex/ip/cpdk/ngspice/tian_subckt.lib
+
+X999 LPI LPO loopgainprobe
 
 VSS  VSS  0     dc 0
 VDD  VDD VSS dc 1.8
@@ -32,6 +37,22 @@ VSENS I_TEMP 0 dc 0.5
 optran 0 0 0 10n 10u 0
 op
 write TB_JNW_VIS_TI.raw
+
+* Set voltage AC to 1
+ac dec 50 100 10G
+
+* Set Current to 1
+alter i.X999.Ii acmag=1
+alter v.X999.Vi acmag=0
+ac dec 50 100 10G
+
+let lg_mag = db(tian_loop())
+let lg_phase = 180*cph(tian_loop())/pi
+
+write
+
+
+
 exit
 .endc
 .end
