@@ -1,0 +1,25 @@
+* Measure TEMP_CURR_AK
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+#ifdef Nosweep
+foreach vtemp 27
+#else
+foreach vtemp {temp_sweep}
+#endif
+    echo "LINE_SHIFT"
+    echo "LINE_SHIFT"
+    set fend = .raw
+    load {cicname}_$vtemp$fend
+
+    meas tran i_temp$vtemp find i(VSENS) at=80n
+    meas tran vref$vtemp find v(VREF) at=80n
+
+end
+
+echo "MEAS_END"
+.endc
+
