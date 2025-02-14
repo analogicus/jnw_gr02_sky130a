@@ -1,9 +1,0 @@
-* Measure TEMP_TO_CURR_AK
-.control
-
-load {cicname}.raw
-
-echo "MEAS_START"
-
-echo "MEAS_END"
-.endc
