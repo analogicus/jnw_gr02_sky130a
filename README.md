@@ -24,7 +24,7 @@ Group2
 
 | f3db            |  gm_db | lf_gain | pm_deg | ug  |
 | :-              |  :-:   |  :-:    |  :-:   | :-: |
-| 4.5765 MHz       |  -6.6304   |  25.399    |  41.874   | 87.122 MHz |
+| 1.04 MHz       |  -8.328272   |  34.49467    |  48.99504   | 54.198 MHz |
 
 - **LOOP GAIN**  
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/lstb_schgtkttttvtnosweep_loop_gain.png?raw=true)  
