@@ -14,7 +14,7 @@ def main(name):
   fname = name +".png"
   print(f"Saving {fname}")
 
-  Temp = [-40, -30, -20, -10, 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130]
+  Temp = [-20, -10, 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130]
   # Initialize empty lists
   current = []
   vref = []

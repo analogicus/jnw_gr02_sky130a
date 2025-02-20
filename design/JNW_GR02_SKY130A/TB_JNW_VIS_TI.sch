@@ -34,12 +34,14 @@ VSS  VSS  0     dc 0
 VDD  VDD VSS dc 1.8 
 VPUP PWR_UP VSS PULSE ( 0 1.8 1NS 1PS 1PS 1NS 1S 1)
 VSENS I_TEMP 0 dc 0.5
+
+
 .option temp = 25
 .option savecurrents
 .save all
 .control
 
-
+.IC V(LPO)=0.5
 optran 0 0 0 10n 10u 0
 op
 write TB_JNW_VIS_TI.raw
