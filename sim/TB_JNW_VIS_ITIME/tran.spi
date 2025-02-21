@@ -3,15 +3,15 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/JNW_VIS_TI_lpe.spi
+.include ../../../work/lpe/TB_JNW_VIS_ITIME_lpe.spi
 #else
-.include ../../../work/xsch/JNW_VIS_TI.spice
+.include ../../../work/xsch/TB_JNW_VIS_ITIME.spice
 #endif
 
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
-.option TNOM=27 GMIN=1e-15 reltol=1e-3
+.option TNOM=27 GMIN=1e-15 reltol=1e-3 method=gear
 
 *-----------------------------------------------------------------
 * PARAMETERS
@@ -20,15 +20,15 @@
 
 .param AVDD = {vdda}
 
-.PARAM TEMP_VAR = 25
-
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD VSS dc 1.8 
+VDD  VDD  VSS   dc 1.8
 VPUP PWR_UP VSS PULSE ( 0 1.8 1NS 1PS 1PS 1NS 1S 1)
-VSENS I_TEMP 0 dc 0.5
+VSENS ITEMP_O ITEMP_I dc 0
+
+VRST RST VSS PULSE ( 0 1.8 50NS 1PS 1PS 5NS 950NS)
 
 RSH LPO LPI 1u
 
@@ -40,7 +40,7 @@ RSH LPO LPI 1u
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
-.save all i(VSENS) v(VREF)
+.save all i(VSENS) v(VREF) v(VOUT) v(ITEMP_I)
 
 
 *----------------------------------------------------------------
@@ -52,12 +52,10 @@ set color0=white
 set color1=black
 unset askquit
 
-*optran 0 0 0 1n 10n 0
+optran 0 0 0 1n 1u 0
 
-.ic V(LPO)=0.5
 
-dc temp -100 125 0.5
-
+tran 1n 2u 1p
 write
 quit
 
@@ -65,5 +63,3 @@ quit
 .endc
 
 .end
-
-

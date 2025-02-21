@@ -1,0 +1,11 @@
+* Measure TB_JNW_VIS_ITIME
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+meas tran VCAP find V(ITEMP_I) at=80n
+
+echo "MEAS_END"
+.endc

@@ -4,4 +4,3 @@ K {}
 V {}
 S {}
 E {}
-T {Visnar Temperature to Current} -920 -600 0 0 1 1 {}
