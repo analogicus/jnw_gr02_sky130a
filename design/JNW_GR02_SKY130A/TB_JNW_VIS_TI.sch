@@ -33,10 +33,10 @@ X999 LPI LPO loopgainprobe
 VSS  VSS  0     dc 0
 VDD  VDD VSS dc 1.8 
 VPUP PWR_UP VSS PULSE ( 0 1.8 1NS 1PS 1PS 1NS 1S 1)
-VSENS I_TEMP 0 dc 0.5
+VSENS I_TEMP 0 dc 0.6
 
 
-.option temp = 25
+.option temp = 125
 .option savecurrents
 .save all
 .control

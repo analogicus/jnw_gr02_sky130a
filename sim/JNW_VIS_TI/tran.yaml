@@ -9,24 +9,24 @@
 #  digits: <significant digits>
 #  unit: Unit
 
-#vref:
-#  src:
-#    - vref27
-#  name: Referance Voltage
-#  min: -20%
-#  typ: 1.2
-#  max: 20%
-#  scale: 1
-#  digits: 5
-#  unit: V
+vref:
+  src:
+    - vref27
+  name: Referance Voltage
+  min: -20%
+  typ: 1.2
+  max: 20%
+  scale: 1
+  digits: 5
+  unit: V
 
-#isens:
-#  src:
-#    - i_temp27
-#  name: Temperature current
-#  min: -20%
-#  typ: 15
-#  max: 20%
-#  scale: 1e6
-#  digits: 5
-#  unit: uA
+isens:
+  src:
+    - i_temp27
+  name: Temperature current
+  min: -20%
+  typ: 3.6
+  max: 20%
+  scale: 1e6
+  digits: 5
+  unit: uA

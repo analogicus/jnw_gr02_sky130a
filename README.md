@@ -17,6 +17,7 @@ Group2
 - The module generates the current with linear change dependent on the temperature. It works from -40 to 130 degrees Celsius - check the plot image.  
 - The module also generates a "stable" voltage reference of around 1.15V.  
 - For the nice plot you need to comment out the **return** in the `jnw_gr02_sky130a/sim/JNW_VIS_TI` and run the `make tempsweep` - it will take a while...  
+- Taking care to have small current, to achieve as much time between capacitor resets with the smallest capacitors as possible
 
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/Figure_1_GoodLinearity.png?raw=true)
 
@@ -24,7 +25,7 @@ Group2
 
 | f3db            |  gm_db | lf_gain | pm_deg | ug  |
 | :-              |  :-:   |  :-:    |  :-:   | :-: |
-| 1.04 MHz       |  -8.328272   |  34.49467    |  48.99504   | 54.198 MHz |
+| 292.715 kHz       |  -11.54   |  33.98    |  57.49   | 14.334 MHz |
 
 - **LOOP GAIN**  
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/lstb_schgtkttttvtnosweep_loop_gain.png?raw=true)  
@@ -40,6 +41,15 @@ Group2
 - **I_TEMP**
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/isens_dc_plot.png?raw=true)  
 
+
+**JNW_VIS_ITIME - Current to time conversion module**  
+- Second milestone for AIC Project  
+- Using a basic capacitor and opamp as comparator we get the 1 or 0 if the Vcap is larger than Vref from previous module.  
+- Current is filling this capacitor and we "measure" the voltage on it  
+- Capacitor is emptied through MOSFET at a RST signal  
+- Bellow is an image of Vcap and Vout signal, Vref is around 1.15V. The Vcap is reset twice in this figure
+
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/sim/TB_JNW_VIS_ITIME/Vcap_Vout.png?raw=true) 
 ---
 
 # How
@@ -51,7 +61,7 @@ Group2
 - Designed an OPAMP - similar tactics as above.  
 - Taking care to be in `gmid = 10` with all the transistors.  
 - To fine-tune the reference voltage, we played with resistances.  
-- **"More current, fewer problems"** looks like the answer to life :)  
+- Reducing the current to get more time between resets of the capacitor 
 
 
 # What

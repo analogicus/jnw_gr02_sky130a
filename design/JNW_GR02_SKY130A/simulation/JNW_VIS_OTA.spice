@@ -17,10 +17,7 @@ x8<1> VOP VGS_M VDD VDD JNWATR_PCH_8C1F2
 x9 VGS_M VGS_M VDD VDD JNWATR_PCH_8C1F2
 x11 net1 net1 VDD VDD JNWATR_PCH_12C5F0
 x2<0> VSS net2 VSS JNWTR_RPPO4
-x1<0> net2 VGS_M VSS JNWTR_RPPO4
-x1<1> net2 VGS_M VSS JNWTR_RPPO4
-x1<2> net2 VGS_M VSS JNWTR_RPPO4
-x1<3> net2 VGS_M VSS JNWTR_RPPO4
+x1<0> net2 VGS_M VSS JNWTR_RPPO8
 **.ends
 
 * expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_4C1F2.sym # of pins=4
@@ -86,6 +83,17 @@ XXA1 N P B JNWTR_RES4
 .ends
 
 
+* expanding   symbol:  JNW_TR_SKY130A/JNWTR_RPPO8.sym # of pins=3
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO8.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO8.sch
+.subckt JNWTR_RPPO8 N P B
+*.iopin P
+*.iopin N
+*.iopin B
+XXA1 N P B JNWTR_RES8
+.ends
+
+
 * expanding   symbol:  JNW_TR_SKY130A/JNWTR_RES4.sym # of pins=3
 ** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES4.sym
 ** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES4.sch
@@ -97,6 +105,24 @@ XR1_0 INT_0 N B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
 XR1_1 INT_1 INT_0 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
 XR1_2 INT_2 INT_1 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
 XR1_3 P INT_2 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  JNW_TR_SKY130A/JNWTR_RES8.sym # of pins=3
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES8.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES8.sch
+.subckt JNWTR_RES8 N P B
+*.iopin N
+*.iopin P
+*.iopin B
+XR1_0 INT_0 N B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_1 INT_1 INT_0 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_2 INT_2 INT_1 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_3 INT_3 INT_2 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_4 INT_4 INT_3 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_5 INT_5 INT_4 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_6 INT_6 INT_5 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_7 P INT_6 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
 .ends
 
 .end
