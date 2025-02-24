@@ -49,7 +49,7 @@ Group2
 - Capacitor is emptied through MOSFET at a RST signal  
 - Bellow is an image of Vcap and Vout signal, Vref is around 1.15V. The Vcap is reset twice in this figure
 
-![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/sim/TB_JNW_VIS_ITIME/Vcap_Vout.png?raw=true) 
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_ITIME/Vcap_Vout.png?raw=true) 
 ---
 
 # How
