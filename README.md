@@ -41,7 +41,7 @@ Group2
 - Using a basic capacitor and opamp as comparator we get the 1 or 0 if the Vcap is larger than Vref from previous module.  
 - Current is filling this capacitor and we "measure" the voltage on it  
 - Capacitor is emptied through MOSFET at a RST signal  
-- Bellow is an image of Vcap and Vout signal, Vref is around 1.15V. The Vcap is reset twice in this figure
+- Bellow is an image of Vcap and Vout signal, Vref is around 1.15V. The Vcap is reset twice in this figure. The speed of reset is way higher than it will be in the end design. Quick calculation lands us that f_rst will be less than 150kHz. In this simulation is 1MHz
 
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_ITIME/Vcap_Vout.png?raw=true) 
 ---
