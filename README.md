@@ -35,12 +35,6 @@ Group2
 
 - DC analysis is a bit funky, it changes with the moon phases... current doesn't really compare to the tran analysis, vref is quite similar  
 
-- **VREF**
-![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/vref_dc_plot.png?raw=true)  
-
-- **I_TEMP**
-![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/isens_dc_plot.png?raw=true)  
-
 
 **JNW_VIS_ITIME - Current to time conversion module**  
 - Second milestone for AIC Project  
