@@ -35,6 +35,6 @@ C {devices/ipin.sym} 160 -40 0 0 {name=p3 lab=VREF}
 C {devices/ipin.sym} -240 60 0 0 {name=p4 lab=I_TEMP}
 C {JNW_GR02_SKY130A/JNW_VIS_OTA.sym} 290 150 0 0 {name=x7}
 C {JNW_ATR_SKY130A/JNWATR_NCH_8C1F2.sym} 80 250 0 1 {name=x4 }
-C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} -130 280 0 0 {name=x1[0:29]}
 C {devices/ipin.sym} 100 250 0 1 {name=p5 lab=RST}
 C {devices/opin.sym} 530 10 0 0 {name=p6 lab=VOUT}
+C {JNW_TR_SKY130A/JNWTR_CAPX4.sym} -130 280 0 0 {name=x1[0:7]}
