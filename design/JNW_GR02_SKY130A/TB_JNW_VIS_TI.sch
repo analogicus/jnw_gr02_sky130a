@@ -36,7 +36,7 @@ VPUP PWR_UP VSS PULSE ( 0 1.8 1NS 1PS 1PS 1NS 1S 1)
 VSENS I_TEMP 0 dc 0.6
 
 
-.option temp = 125
+.option temp = 100
 .option savecurrents
 .save all
 .control

@@ -19,14 +19,16 @@ vref:
   scale: 1
   digits: 5
   unit: V
+  optional: true
 
 isens:
   src:
     - i_temp27
   name: Temperature current
-  min: -20%
-  typ: 3.6
-  max: 20%
+  min: -25%
+  typ: 1.8
+  max: 25%
   scale: 1e6
   digits: 5
   unit: uA
+  optional: true

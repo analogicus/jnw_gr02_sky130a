@@ -16,10 +16,11 @@ Group2
 - First step in making the temperature sensor for AIC2025 course.  
 - The module generates the current with linear change dependent on the temperature. It works from -40 to 130 degrees Celsius - check the plot image.  
 - The module also generates a "stable" voltage reference of around 1.15V.  
-- For the nice plot you need to comment out the **return** in the `jnw_gr02_sky130a/sim/JNW_VIS_TI` and run the `make tempsweep` - it will take a while...  
+- For the nice plot you need to run the temp_tran_combine.py and the image will appear in the folder. It combines all simulations without Nosweep at the end.  
 - Taking care to have small current, to achieve as much time between capacitor resets with the smallest capacitors as possible
+- The plots show the current and v_ref done from etc simulation
 
-![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/Figure_1_GoodLinearity.png?raw=true)
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/combined_plot.png?raw=true)
 
 - Bellow are the plots and data of stability analysis  
 

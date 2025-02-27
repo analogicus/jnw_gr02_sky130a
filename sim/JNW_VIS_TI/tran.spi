@@ -45,7 +45,7 @@ RSH LPO LPI 1u
 * NGSPICE control
 *----------------------------------------------------------------
 .control
-set num_threads=8
+set num_threads=6
 set color0=white
 set color1=black
 unset askquit
@@ -55,12 +55,12 @@ optran 0 0 0 1n 1u 0
 set fend = .raw
 #ifdef Nosweep
     option temp=27
-    tran 1n 200n 1p
+    tran 10n 500n 1p
     write
 #else
     foreach vtemp {temp_sweep}
         option temp=$vtemp
-        tran 1n 200n 1p
+        tran 5n 500n 1p
         write {cicname}_$vtemp$fend
     end
 #endif

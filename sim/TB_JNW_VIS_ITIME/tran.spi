@@ -11,7 +11,7 @@
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
-.option TNOM=27 GMIN=1e-15 reltol=1e-3 method=gear
+.option TNOM=27 GMIN=1e-15 reltol=1e-3 method=gear TEMP=-20
 
 *-----------------------------------------------------------------
 * PARAMETERS
@@ -28,7 +28,7 @@ VDD  VDD  VSS   dc 1.8
 VPUP PWR_UP VSS PULSE ( 0 1.8 1NS 1PS 1PS 1NS 1S 1)
 VSENS ITEMP_O ITEMP_I dc 0
 
-VRST RST VSS PULSE ( 0 1.8 50NS 1PS 1PS 5NS 950NS)
+VRST RST VSS PULSE ( 0 1.8 50NS 1PS 1PS 50NS 15US)
 
 RSH LPO LPI 1u
 
@@ -55,7 +55,7 @@ unset askquit
 optran 0 0 0 1n 1u 0
 
 
-tran 1n 2u 1p
+tran 10n 20u 1p
 write
 quit
 

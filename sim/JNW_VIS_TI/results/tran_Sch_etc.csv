@@ -1,17 +1,9 @@
 ,vref27,i_temp27,name,type,time,OK
-0,1.158468,3.617992,tran_SchGtKfsTlVhNosweep,Sch,Mon Feb 24 21:48:22 2025,False
-1,1.157414,3.607432,tran_SchGtKsfTlVhNosweep,Sch,Mon Feb 24 21:48:22 2025,False
-2,1.163131,4.176346000000001,tran_SchGtKffTlVhNosweep,Sch,Mon Feb 24 21:48:22 2025,True
-3,1.152734,3.1715079999999998,tran_SchGtKssTlVhNosweep,Sch,Mon Feb 24 21:48:22 2025,False
-4,1.158468,3.617992,tran_SchGtKfsThVhNosweep,Sch,Mon Feb 24 21:48:22 2025,False
-5,1.157414,3.607432,tran_SchGtKsfThVhNosweep,Sch,Mon Feb 24 21:48:22 2025,False
-6,1.163131,4.176346000000001,tran_SchGtKffThVhNosweep,Sch,Mon Feb 24 21:48:22 2025,True
-7,1.152734,3.1715079999999998,tran_SchGtKssThVhNosweep,Sch,Mon Feb 24 21:48:22 2025,False
-8,1.158468,3.617992,tran_SchGtKfsTlVlNosweep,Sch,Mon Feb 24 21:48:22 2025,False
-9,1.157414,3.607432,tran_SchGtKsfTlVlNosweep,Sch,Mon Feb 24 21:48:22 2025,False
-10,1.163131,4.176346000000001,tran_SchGtKffTlVlNosweep,Sch,Mon Feb 24 21:48:22 2025,True
-11,1.152734,3.1715079999999998,tran_SchGtKssTlVlNosweep,Sch,Mon Feb 24 21:48:22 2025,False
-12,1.158468,3.617992,tran_SchGtKfsThVlNosweep,Sch,Mon Feb 24 21:48:22 2025,False
-13,1.157414,3.607432,tran_SchGtKsfThVlNosweep,Sch,Mon Feb 24 21:48:21 2025,False
-14,1.163131,4.176346000000001,tran_SchGtKffThVlNosweep,Sch,Mon Feb 24 21:48:21 2025,True
-15,1.152734,3.1715079999999998,tran_SchGtKssThVlNosweep,Sch,Mon Feb 24 21:48:21 2025,False
+0,1.177976,1.881465,tran_SchGtKfsTlVtNosweep,Sch,Thu Feb 27 18:17:49 2025,True
+1,1.171716,1.857024,tran_SchGtKsfTlVtNosweep,Sch,Thu Feb 27 18:17:45 2025,True
+2,1.180235,2.161083,tran_SchGtKffTlVtNosweep,Sch,Thu Feb 27 18:17:42 2025,True
+3,1.169686,1.6417540000000002,tran_SchGtKssTlVtNosweep,Sch,Thu Feb 27 18:17:38 2025,True
+4,1.177976,1.881465,tran_SchGtKfsThVtNosweep,Sch,Thu Feb 27 18:17:34 2025,True
+5,1.171716,1.857024,tran_SchGtKsfThVtNosweep,Sch,Thu Feb 27 18:17:31 2025,True
+6,1.180235,2.161083,tran_SchGtKffThVtNosweep,Sch,Thu Feb 27 18:17:27 2025,True
+7,1.169686,1.6417540000000002,tran_SchGtKssThVtNosweep,Sch,Thu Feb 27 18:17:23 2025,True

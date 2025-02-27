@@ -117,16 +117,16 @@ C {devices/opin.sym} 0 -265 1 0 {name=p4 lab=I_TEMP}
 C {JNW_ATR_SKY130A/JNWATR_NCH_2C1F2.sym} -840 -50 0 0 {name=x11 }
 C {devices/ipin.sym} -980 -50 0 0 {name=p5 lab=PWR_UP
 }
-C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} -800 170 0 0 {name=x1[0:2]}
+C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} -800 170 0 0 {name=x1[0:7]}
 C {devices/lab_wire.sym} -170 -60 0 0 {name=p6 sig_type=std_logic lab=VIP}
 C {devices/lab_wire.sym} -520 -60 0 0 {name=p7 sig_type=std_logic lab=VIN}
 C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -170 -265 1 0 {name=x5[0]}
 C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} -170 10 1 0 {name=x8[0:1]}
-C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} -850 -310 0 1 {name=x1 }
-C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} -480 -350 0 1 {name=x2 }
-C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} -210 -350 0 0 {name=x3 }
-C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} -40 -350 0 0 {name=x4 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -850 100 0 1 {name=x6 }
+C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} -850 -310 0 1 {name=x2[0:3] }
+C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} -480 -350 0 1 {name=x3[0:3] }
+C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} -210 -350 0 0 {name=x4[0:3] }
+C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} -40 -350 0 0 {name=x7[0:1]}
+C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -850 100 0 1 {name=x6}
 C {devices/opin.sym} -485 -280 1 0 {name=p8 lab=LPI}
 C {devices/opin.sym} -430 -280 1 0 {name=p9 lab=LPO}
 C {devices/lab_wire.sym} -170 100 0 0 {name=p10 sig_type=std_logic lab=VD2

@@ -19,20 +19,38 @@ test:
 tempsweep: netlist
 	cicsim run --replace replace.yaml --name ${VIEW}_tempsweep ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt
 
+tempsweep_fs: netlist
+	cicsim run --replace replace.yaml --name ${VIEW}_tempsweep ${TB} ${OPT} ${VIEW} Gt Kfs Tt Vt
+
+tempsweep_sf: netlist
+	cicsim run --replace replace.yaml --name ${VIEW}_tempsweep ${TB} ${OPT} ${VIEW} Gt Ksf Tt Vt
+
+tempsweep_etc: netlist
+	cicsim run --replace replace.yaml --name ${VIEW}_tempsweep ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs,Ktt" Tt Vt
+
+tempsweep_mc: netlist
+	cicsim run --replace replace.yaml --name ${VIEW}_tempsweep ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"
+
 typical: netlist
 	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt Nosweep
 
 slow: netlist
 	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt Kss "Th,Tl" Vl Nosweep
 
+slow_fast: netlist
+	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt Ksf Tt Vl Nosweep
+
+fast_slow: netlist
+	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt Kfs Tt Vl Nosweep
+
 fast: netlist
 	cicsim run --name ${VIEW}_fast ${TB} ${OPT} ${VIEW} Gt Kff "Th,Tl" Vh Nosweep
 
 tfs: netlist
-	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt,Th,Tl" "Vt,Vl,Vh" Nosweep
+	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt,Th,Tl" Vt Nosweep
 
 etc: netlist
-	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vh" Nosweep
+	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" Vt Nosweep
 
 mc: netlist
 	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt" Nosweep
