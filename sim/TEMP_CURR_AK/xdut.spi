@@ -1,2 +1,2 @@
 *Automatic generated instance fron ../../tech/scripts/genxdut TEMP_CURR_AK
-XDUT LPO I_TEMP VREF VDD VSS PWR_UP LPI  TEMP_CURR_AK
+XDUT VDD LPO VREF I_TEMP PWR_UP LPI VSS  TEMP_CURR_AK

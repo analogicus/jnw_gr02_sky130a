@@ -13,7 +13,7 @@ N 200 80 200 140 {lab=#net1}
 N 160 40 180 40 {lab=VSS}
 N 160 40 160 180 {lab=VSS}
 N 120 50 160 50 {lab=VSS}
-N 200 -80 200 -0 {lab=REFV}
+N 200 -80 200 -0 {lab=VREF}
 N -60 -110 160 -110 {lab=#net3}
 N -100 -80 -100 160 {lab=#net4}
 N -100 160 -100 240 {lab=#net4}
@@ -23,7 +23,7 @@ N -140 270 -140 320 {lab=VSS}
 N -100 300 -100 320 {lab=VSS}
 N 160 270 160 320 {lab=VSS}
 N 350 -80 350 -40 {lab=I_TEMP}
-N 200 -40 240 -40 {lab=REFV}
+N 200 -40 240 -40 {lab=VREF}
 N 280 -110 310 -110 {lab=#net3}
 N 280 -160 280 -110 {lab=#net3}
 N 160 -160 280 -160 {lab=#net3}
@@ -86,19 +86,19 @@ model=pnp_05v5_W3p40L3p40
 m=8
 spiceprefix=X
 }
-C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} 200 140 1 0 {name=x2[0:5]}
-C {JNW_TR_SKY130A/JNWTR_RPPO8.sym} 200 0 1 0 {name=x1[0:1] }
-C {JNW_ATR_SKY130A/JNWATR_PCH_8C1F2.sym} 160 -110 0 0 {name=x2 }
-C {JNW_ATR_SKY130A/JNWATR_PCH_8C1F2.sym} -60 -110 0 1 {name=x3 }
-C {JNW_ATR_SKY130A/JNWATR_PCH_8C1F2.sym} 310 -110 0 0 {name=x4 }
+C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} 200 140 1 0 {name=x2[0:1]}
 C {devices/opin.sym} 350 -40 1 0 {name=p2 lab=I_TEMP}
 C {devices/opin.sym} 240 -40 0 0 {name=p3 lab=VREF
 }
-C {JNW_ATR_SKY130A/JNWATR_PCH_8C1F2.sym} -400 -60 0 1 {name=x5 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_8C5F0.sym} -400 140 0 1 {name=x6 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_12C1F2.sym} -340 70 0 0 {name=x7 }
-C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} -300 240 0 0 {name=x8[0] }
+C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} -300 240 0 0 {name=x8[0:2] }
 C {devices/ipin.sym} -480 -180 0 0 {name=p4 lab=VDD}
 C {devices/ipin.sym} -500 320 0 0 {name=p5 lab=VSS}
 C {devices/ipin.sym} -520 70 0 0 {name=p6 lab=PWR_UP}
 C {devices/opin.sym} -220 140 0 0 {name=p7 lab=LPI}
+C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} -400 -60 0 1 {name=x8 }
+C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -400 140 0 1 {name=x5 }
+C {JNW_ATR_SKY130A/JNWATR_NCH_2C1F2.sym} -340 70 0 0 {name=x6 }
+C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} -60 -110 0 1 {name=x7 }
+C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} 160 -110 0 0 {name=x2 }
+C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} 310 -110 0 0 {name=x3 }
+C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} 200 0 1 0 {name=x4[0]}
