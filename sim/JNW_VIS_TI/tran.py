@@ -4,11 +4,7 @@ import matplotlib.pyplot as plt
 
 def main(name):
   # Delete next line if you want to use python post processing
-<<<<<<< HEAD
   #return
-=======
-  # return
->>>>>>> 3cddde7 (Done the simulation for the whole temperagure range in etc - forced me to fix a lot in the modules to make it work)
   yamlfile = name + ".yaml"
 
   if "Nosweep" in yamlfile:
