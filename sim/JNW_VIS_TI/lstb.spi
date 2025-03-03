@@ -72,8 +72,8 @@ let lg_mag = db(tian_loop())
 let lg_phase = 180*cph(tian_loop())/pi
 
 set gnuplot_terminal=png/quit
-gnuplot {cicname}_loop_gain lg_mag
-gnuplot {cicname}_loop_phase lg_phase
+gnuplot ../{cicname}_loop_gain lg_mag
+gnuplot ../{cicname}_loop_phase lg_phase
 
 write
 

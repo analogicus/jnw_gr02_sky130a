@@ -29,7 +29,7 @@ tempsweep_etc: netlist
 	cicsim run --replace replace.yaml --name ${VIEW}_tempsweep ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs,Ktt" Tt Vt
 
 tempsweep_mc: netlist
-	cicsim run --replace replace.yaml --name ${VIEW}_tempsweep ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"
+	cicsim run --replace replace.yaml --name ${VIEW}_tempsweep --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"
 
 typical: netlist
 	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt Nosweep

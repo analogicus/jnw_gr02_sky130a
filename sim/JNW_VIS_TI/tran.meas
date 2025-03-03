@@ -16,8 +16,8 @@ foreach vtemp {temp_sweep}
     set fend = .raw
     load {cicname}_$vtemp$fend
 
-    meas tran i_temp$vtemp find i(VSENS) at=500n
-    meas tran vref$vtemp find v(VREF) at=500n
+    meas tran i_temp$vtemp find i(VSENS) at=1000n
+    meas tran vref$vtemp find v(VREF) at=1000n
 
 end
 

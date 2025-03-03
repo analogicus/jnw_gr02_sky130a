@@ -48,6 +48,6 @@ def main(name):
   plt.tight_layout()
   
   #plt.show()
-  plt.savefig(fname)
+  plt.savefig("./Figures/" + fname)
 
   print(vref)

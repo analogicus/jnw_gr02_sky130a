@@ -76,9 +76,11 @@ N 210 -290 210 -70 {lab=VOUT
 N 210 -320 260 -320 {lab=VDD}
 N 260 -390 260 -320 {lab=VDD}
 N 210 -180 260 -180 {lab=VOUT}
-N -440 -260 -440 20 {lab=VSS}
 N -480 -300 -460 -300 {lab=VSS}
 N -440 -370 -440 -340 {lab=#net2}
+N -440 -260 -440 -220 {lab=#net3}
+N -440 -140 -440 20 {lab=VSS}
+N -480 -180 -460 -180 {lab=VSS}
 C {devices/ipin.sym} -450 -590 0 0 {name=p1 lab=VDD}
 C {devices/ipin.sym} -220 -140 0 0 {name=p4 lab=VIP
 }
@@ -101,5 +103,6 @@ C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} 170 -320 0 0 {name=x11[0:1] }
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C1F2.sym} -110 -530 0 0 {name=x9[0:1]}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C1F2.sym} -190 -530 0 1 {name=x3[0:1] }
 C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} -270 -320 0 1 {name=x12[0:1] }
-C {JNW_TR_SKY130A/JNWTR_RPPO8.sym} -440 -340 1 0 {name=x2[0]}
+C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} -440 -340 1 0 {name=x2[0]}
 C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -440 -450 1 0 {name=x1[0]}
+C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} -440 -220 1 0 {name=x13[0:1]}
