@@ -14,7 +14,7 @@ vref:
     - vref27
   name: Referance Voltage
   min: -25%
-  typ: 1.2
+  typ: 1.24
   max: 25%
   scale: 1
   digits: 5
@@ -26,7 +26,7 @@ isens:
     - i_temp27
   name: Temperature current
   min: -25%
-  typ: 1.9
+  typ: 3.8
   max: 25%
   scale: 1e6
   digits: 5

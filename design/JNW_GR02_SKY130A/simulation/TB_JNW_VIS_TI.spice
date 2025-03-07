@@ -7,7 +7,7 @@
 *.ipin PWR_UP
 *.opin LPI
 *.opin LPO
-x1 VDD VREF LPI LPO I_TEMP PWR_UP VSS JNW_VIS_TI
+x1 I_TEMP VDD VREF LPO LPI PWR_UP VSS JNW_VIS_TI
 **** begin user architecture code
 
 
@@ -27,16 +27,16 @@ X999 LPI LPO loopgainprobe
 VSS  VSS  0     dc 0
 VDD  VDD VSS dc 1.8
 VPUP PWR_UP VSS PULSE ( 0 1.8 10NS 1PS 1PS 10NS 1S 1)
-VSENS I_TEMP 0 dc 0.6
+VSENS I_TEMP VSS dc 0.6
 
 
-.option temp = 100
+.option temp = 27
 .option savecurrents
 .save all
 .control
 
 .IC V(LPO)=0.5
-optran 0 0 0 10n 10u 0
+optran 0 0 0 10n 100u 0
 op
 write TB_JNW_VIS_TI.raw
 exit
@@ -51,14 +51,14 @@ exit
 * expanding   symbol:  JNW_GR02_SKY130A/JNW_VIS_TI.sym # of pins=7
 ** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_GR02_SKY130A/JNW_VIS_TI.sym
 ** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_GR02_SKY130A/JNW_VIS_TI.sch
-.subckt JNW_VIS_TI VDD VREF LPI LPO I_TEMP PWR_UP VSS
+.subckt JNW_VIS_TI I_TEMP VDD VREF LPO LPI PWR_UP VSS
 *.ipin VSS
 *.opin VREF
-*.opin I_TEMP
 *.ipin PWR_UP
 *.opin LPI
 *.opin LPO
 *.ipin VDD
+*.opin I_TEMP
 XQ1<0> VSS VSS VIN sky130_fd_pr__pnp_05v5_W3p40L3p40 m=1 mult=1
 XQ2<0> VSS VSS VD2 sky130_fd_pr__pnp_05v5_W3p40L3p40 m=8 mult=8
 x7 VDD VIN VIP VSS LPO JNW_VIS_OTA
@@ -74,74 +74,46 @@ x1<6> LPI VSS JNWTR_CAPX1
 x1<7> LPI VSS JNWTR_CAPX1
 x1<8> LPI VSS JNWTR_CAPX1
 x1<9> LPI VSS JNWTR_CAPX1
-x3 net5 net6 VSS JNWTR_RPPO4
-x8<0> VD2 VIP VSS JNWTR_RPPO2
-x8<1> VD2 VIP VSS JNWTR_RPPO2
-x6 V_MEAS1 LPI VSS VSS JNWATR_NCH_12C5F0
-x9 net6 VREF VSS JNWTR_RPPO4
-x2<0> V_MEAS2 V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x2<1> V_MEAS2 V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x2<2> V_MEAS2 V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x2<3> V_MEAS2 V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x2<4> V_MEAS2 V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x2<5> V_MEAS2 V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x2<6> V_MEAS2 V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x2<7> V_MEAS2 V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x14<0> V_MEAS1 net4 V_MEAS2 V_MEAS2 JNWATR_PCH_8C5F0
-x14<1> V_MEAS1 net4 V_MEAS2 V_MEAS2 JNWATR_PCH_8C5F0
-x14<2> V_MEAS1 net4 V_MEAS2 V_MEAS2 JNWATR_PCH_8C5F0
-x14<3> V_MEAS1 net4 V_MEAS2 V_MEAS2 JNWATR_PCH_8C5F0
-x14<4> V_MEAS1 net4 V_MEAS2 V_MEAS2 JNWATR_PCH_8C5F0
-x14<5> V_MEAS1 net4 V_MEAS2 V_MEAS2 JNWATR_PCH_8C5F0
-x14<6> V_MEAS1 net4 V_MEAS2 V_MEAS2 JNWATR_PCH_8C5F0
-x14<7> V_MEAS1 net4 V_MEAS2 V_MEAS2 JNWATR_PCH_8C5F0
-x3<0> net2<7> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x3<1> net2<6> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x3<2> net2<5> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x3<3> net2<4> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x3<4> net2<3> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x3<5> net2<2> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x3<6> net2<1> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x3<7> net2<0> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x4<0> VREF net4 net2<7> net2<7> JNWATR_PCH_8C5F0
-x4<1> VREF net4 net2<6> net2<6> JNWATR_PCH_8C5F0
-x4<2> VREF net4 net2<5> net2<5> JNWATR_PCH_8C5F0
-x4<3> VREF net4 net2<4> net2<4> JNWATR_PCH_8C5F0
-x4<4> VREF net4 net2<3> net2<3> JNWATR_PCH_8C5F0
-x4<5> VREF net4 net2<2> net2<2> JNWATR_PCH_8C5F0
-x4<6> VREF net4 net2<1> net2<1> JNWATR_PCH_8C5F0
-x4<7> VREF net4 net2<0> net2<0> JNWATR_PCH_8C5F0
-x15<0> net4 net4 VDD VDD JNWATR_PCH_12C5F0
-x15<1> net4 net4 VDD VDD JNWATR_PCH_12C5F0
-x7<0> net3<3> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x7<1> net3<2> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x7<2> net3<1> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x7<3> net3<0> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x9<0> I_TEMP net4 net3<3> net3<3> JNWATR_PCH_8C5F0
-x9<1> I_TEMP net4 net3<2> net3<2> JNWATR_PCH_8C5F0
-x9<2> I_TEMP net4 net3<1> net3<1> JNWATR_PCH_8C5F0
-x9<3> I_TEMP net4 net3<0> net3<0> JNWATR_PCH_8C5F0
-x5<0> net1<7> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x5<1> net1<6> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x5<2> net1<5> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x5<3> net1<4> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x5<4> net1<3> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x5<5> net1<2> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x5<6> net1<1> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x5<7> net1<0> V_MEAS1 VDD VDD JNWATR_PCH_8C5F0
-x10<0> VIN net4 net1<7> net1<7> JNWATR_PCH_8C5F0
-x10<1> VIN net4 net1<6> net1<6> JNWATR_PCH_8C5F0
-x10<2> VIN net4 net1<5> net1<5> JNWATR_PCH_8C5F0
-x10<3> VIN net4 net1<4> net1<4> JNWATR_PCH_8C5F0
-x10<4> VIN net4 net1<3> net1<3> JNWATR_PCH_8C5F0
-x10<5> VIN net4 net1<2> net1<2> JNWATR_PCH_8C5F0
-x10<6> VIN net4 net1<1> net1<1> JNWATR_PCH_8C5F0
-x10<7> VIN net4 net1<0> net1<0> JNWATR_PCH_8C5F0
-x20 VSS net4 VSS JNWTR_RPPO8
-x1 VSS VSS VSS JNWTR_RPPO4
-x2 VSS VSS VSS JNWTR_RPPO2
-x6<0> VIP net5 VSS JNWTR_RPPO2
-x6<1> VIP net5 VSS JNWTR_RPPO2
+x9 V_MEAS1 LPI VSS VSS JNWATR_NCH_12C5F0
+x2<0> V_MEAS2 V_MEAS1 VDD VDD JNWATR_PCH_4C5F0
+x2<1> V_MEAS2 V_MEAS1 VDD VDD JNWATR_PCH_4C5F0
+x2<2> V_MEAS2 V_MEAS1 VDD VDD JNWATR_PCH_4C5F0
+x3<0> V_MEAS1 V_MEAS3 V_MEAS2 V_MEAS2 JNWATR_PCH_4C5F0
+x3<1> V_MEAS1 V_MEAS3 V_MEAS2 V_MEAS2 JNWATR_PCH_4C5F0
+x3<2> V_MEAS1 V_MEAS3 V_MEAS2 V_MEAS2 JNWATR_PCH_4C5F0
+x4<0> V_MEAS4 V_MEAS1 VDD VDD JNWATR_PCH_4C5F0
+x4<1> V_MEAS4 V_MEAS1 VDD VDD JNWATR_PCH_4C5F0
+x4<2> V_MEAS4 V_MEAS1 VDD VDD JNWATR_PCH_4C5F0
+x5<0> VREF V_MEAS3 V_MEAS4 V_MEAS4 JNWATR_PCH_4C5F0
+x5<1> VREF V_MEAS3 V_MEAS4 V_MEAS4 JNWATR_PCH_4C5F0
+x5<2> VREF V_MEAS3 V_MEAS4 V_MEAS4 JNWATR_PCH_4C5F0
+x15 V_MEAS3 V_MEAS3 VDD VDD JNWATR_PCH_2C5F0
+x6<0> net2<2> V_MEAS1 VDD VDD JNWATR_PCH_4C5F0
+x6<1> net2<1> V_MEAS1 VDD VDD JNWATR_PCH_4C5F0
+x6<2> net2<0> V_MEAS1 VDD VDD JNWATR_PCH_4C5F0
+x8<0> VSS V_MEAS3 net2<2> net2<2> JNWATR_PCH_4C5F0
+x8<1> VSS V_MEAS3 net2<1> net2<1> JNWATR_PCH_4C5F0
+x8<2> VSS V_MEAS3 net2<0> net2<0> JNWATR_PCH_4C5F0
+x7<0> net1<2> V_MEAS1 VDD VDD JNWATR_PCH_4C5F0
+x7<1> net1<1> V_MEAS1 VDD VDD JNWATR_PCH_4C5F0
+x7<2> net1<0> V_MEAS1 VDD VDD JNWATR_PCH_4C5F0
+x10<0> VIN V_MEAS3 net1<2> net1<2> JNWATR_PCH_4C5F0
+x10<1> VIN V_MEAS3 net1<1> net1<1> JNWATR_PCH_4C5F0
+x10<2> VIN V_MEAS3 net1<0> net1<0> JNWATR_PCH_4C5F0
+x14 net3 VREF VSS JNWTR_RPPO2
+x12<0> net5<1> net3 VSS JNWTR_RPPO2
+x12<1> net5<0> net3 VSS JNWTR_RPPO2
+x13<0> VD2 VIP VSS JNWTR_RPPO2
+x13<1> VD2 VIP VSS JNWTR_RPPO2
+x13<2> VD2 VIP VSS JNWTR_RPPO2
+x13<3> VD2 VIP VSS JNWTR_RPPO2
+x9<0> net4<1> V_MEAS3 VSS JNWTR_RPPO2
+x9<1> net4<0> V_MEAS3 VSS JNWTR_RPPO2
+x15<0> VSS net4<1> VSS JNWTR_RPPO2
+x15<1> VSS net4<0> VSS JNWTR_RPPO2
+x2 I_TEMP V_MEAS1 VDD VDD JNWATR_PCH_2C5F0
+x14<0> VIP net5<1> VSS JNWTR_RPPO2
+x14<1> VIP net5<0> VSS JNWTR_RPPO2
 .ends
 
 
@@ -154,46 +126,26 @@ x6<1> VIP net5 VSS JNWTR_RPPO2
 *.ipin VIN
 *.ipin VSS
 *.opin VOUT
-x8<0> V2 VIP VOP VOP JNWATR_PCH_8C1F2
-x8<1> V2 VIP VOP VOP JNWATR_PCH_8C1F2
-x10<0> V1 VIN VOP VOP JNWATR_PCH_8C1F2
-x10<1> V1 VIN VOP VOP JNWATR_PCH_8C1F2
-x4<0> VOUT V1 VSS VSS JNWATR_NCH_12C5F0
-x6<0> V2 V2 VSS VSS JNWATR_NCH_12C5F0
-x6<1> V2 V2 VSS VSS JNWATR_NCH_12C5F0
-x5<0> net1 V2 VSS VSS JNWATR_NCH_12C5F0
-x7<0> V1 V1 VSS VSS JNWATR_NCH_12C5F0
-x7<1> V1 V1 VSS VSS JNWATR_NCH_12C5F0
-x11<0> VOUT net1 VDD VDD JNWATR_PCH_12C5F0
-x11<1> VOUT net1 VDD VDD JNWATR_PCH_12C5F0
-x12<0> net1 net1 VDD VDD JNWATR_PCH_12C5F0
-x12<1> net1 net1 VDD VDD JNWATR_PCH_12C5F0
-x2<0> net4<1> net3<1> VSS JNWTR_RPPO4
-x2<1> net4<0> net3<0> VSS JNWTR_RPPO4
-x1<0> net3<1> net2<1> VSS JNWTR_RPPO16
-x1<1> net3<0> net2<0> VSS JNWTR_RPPO16
-x13<0> VSS net4<1> VSS JNWTR_RPPO4
-x13<1> VSS net4<0> VSS JNWTR_RPPO4
-x14<0> net2<1> net5 net7<3> net7<3> JNWATR_PCH_12C1F2
-x14<1> net2<0> net5 net7<2> net7<2> JNWATR_PCH_12C1F2
-x14<2> net2<1> net5 net7<1> net7<1> JNWATR_PCH_12C1F2
-x14<3> net2<0> net5 net7<0> net7<0> JNWATR_PCH_12C1F2
-x15 net5 net5 VDD VDD JNWATR_PCH_12C1F2
-x16<0> VOP net5 net6<3> net6<3> JNWATR_PCH_12C1F2
-x16<1> VOP net5 net6<2> net6<2> JNWATR_PCH_12C1F2
-x16<2> VOP net5 net6<1> net6<1> JNWATR_PCH_12C1F2
-x16<3> VOP net5 net6<0> net6<0> JNWATR_PCH_12C1F2
-x17<0> net7<3> net2<1> VDD VDD JNWATR_PCH_12C1F2
-x17<1> net7<2> net2<0> VDD VDD JNWATR_PCH_12C1F2
-x17<2> net7<1> net2<1> VDD VDD JNWATR_PCH_12C1F2
-x17<3> net7<0> net2<0> VDD VDD JNWATR_PCH_12C1F2
-x18<0> net6<3> net2<1> VDD VDD JNWATR_PCH_12C1F2
-x18<1> net6<2> net2<0> VDD VDD JNWATR_PCH_12C1F2
-x18<2> net6<1> net2<1> VDD VDD JNWATR_PCH_12C1F2
-x18<3> net6<0> net2<0> VDD VDD JNWATR_PCH_12C1F2
-x15<0> net8 net5 net8 JNWTR_RPPO4
-x3<0> VSS net8 VSS JNWTR_RPPO4
-x3<1> VSS net8 VSS JNWTR_RPPO4
+x1 V2 VIP VOP VOP JNWATR_PCH_12C1F2
+x2 V1 VIN VOP VOP JNWATR_PCH_12C1F2
+x4<0> VOUT V1 VSS VSS JNWATR_NCH_2C5F0
+x7 V2 V2 VSS VSS JNWATR_NCH_2C5F0
+x5<0> net1 V2 VSS VSS JNWATR_NCH_2C5F0
+x9 V1 V1 VSS VSS JNWATR_NCH_2C5F0
+x11 VOUT net1 VDD VDD JNWATR_PCH_12C5F0
+x5 net1 net1 VDD VDD JNWATR_PCH_12C5F0
+x15 net3 net3 VDD VDD JNWATR_PCH_2C5F0
+x6 net4 net2 VSS JNWTR_RPPO2
+x8<0> VSS net4 VSS JNWTR_RPPO2
+x8<1> VSS net4 VSS JNWTR_RPPO2
+x6<0> net5<1> net3 net5<1> JNWTR_RPPO2
+x6<1> net5<0> net3 net5<0> JNWTR_RPPO2
+x6<2> net5<1> net3 net5<1> JNWTR_RPPO2
+x6<3> net5<0> net3 net5<0> JNWTR_RPPO2
+x13 net2 net2 VDD VDD JNWATR_PCH_12C5F0
+x14 VOP net2 VDD VDD JNWATR_PCH_12C5F0
+x3<0> VSS net5<1> net5<1> JNWTR_RPPO2
+x3<1> VSS net5<0> net5<0> JNWTR_RPPO2
 .ends
 
 
@@ -220,14 +172,42 @@ XC1 B A sky130_fd_pr__cap_mim_m3_1 W=5 L=5 MF=1 m=1
 .ends
 
 
-* expanding   symbol:  JNW_TR_SKY130A/JNWTR_RPPO4.sym # of pins=3
-** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO4.sym
-** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO4.sch
-.subckt JNWTR_RPPO4 N P B
-*.iopin P
-*.iopin N
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sym # of pins=4
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sch
+.subckt JNWATR_NCH_12C5F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
 *.iopin B
-XXA1 N P B JNWTR_RES4
+XM1 D G S B sky130_fd_pr__nfet_01v8 L=0.94 W=8.32 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym # of pins=4
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sch
+.subckt JNWATR_PCH_4C5F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.94 W=3.2 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sym # of pins=4
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sch
+.subckt JNWATR_PCH_2C5F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.94 W=1.92 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 .ends
 
 
@@ -242,28 +222,28 @@ XXA1 N P B JNWTR_RES2
 .ends
 
 
-* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sym # of pins=4
-** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sym
-** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sch
-.subckt JNWATR_NCH_12C5F0 D G S B
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym # of pins=4
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sch
+.subckt JNWATR_PCH_12C1F2 D G S B
 *.iopin D
 *.iopin G
 *.iopin S
 *.iopin B
-XM1 D G S B sky130_fd_pr__nfet_01v8 L=0.94 W=8.32 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
+XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.22 W=8.32 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 .ends
 
 
-* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym # of pins=4
-** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym
-** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sch
-.subckt JNWATR_PCH_8C5F0 D G S B
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym # of pins=4
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sch
+.subckt JNWATR_NCH_2C5F0 D G S B
 *.iopin D
 *.iopin G
 *.iopin S
 *.iopin B
-XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.94 W=5.76 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
+XM1 D G S B sky130_fd_pr__nfet_01v8 L=0.94 W=1.92 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 .ends
 
@@ -281,68 +261,6 @@ XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.94 W=8.32 nf=2 ad='int((nf+1)/2) * W/nf 
 .ends
 
 
-* expanding   symbol:  JNW_TR_SKY130A/JNWTR_RPPO8.sym # of pins=3
-** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO8.sym
-** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO8.sch
-.subckt JNWTR_RPPO8 N P B
-*.iopin P
-*.iopin N
-*.iopin B
-XXA1 N P B JNWTR_RES8
-.ends
-
-
-* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_8C1F2.sym # of pins=4
-** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_8C1F2.sym
-** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_8C1F2.sch
-.subckt JNWATR_PCH_8C1F2 D G S B
-*.iopin D
-*.iopin G
-*.iopin S
-*.iopin B
-XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.22 W=5.76 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
-+ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-.ends
-
-
-* expanding   symbol:  JNW_TR_SKY130A/JNWTR_RPPO16.sym # of pins=3
-** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO16.sym
-** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO16.sch
-.subckt JNWTR_RPPO16 N P B
-*.iopin P
-*.iopin N
-*.iopin B
-XXA1 N P B JNWTR_RES16
-.ends
-
-
-* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym # of pins=4
-** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym
-** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sch
-.subckt JNWATR_PCH_12C1F2 D G S B
-*.iopin D
-*.iopin G
-*.iopin S
-*.iopin B
-XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.22 W=8.32 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
-+ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-.ends
-
-
-* expanding   symbol:  JNW_TR_SKY130A/JNWTR_RES4.sym # of pins=3
-** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES4.sym
-** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES4.sch
-.subckt JNWTR_RES4 N P B
-*.iopin N
-*.iopin P
-*.iopin B
-XR1_0 INT_0 N B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_1 INT_1 INT_0 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_2 INT_2 INT_1 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_3 P INT_2 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-.ends
-
-
 * expanding   symbol:  JNW_TR_SKY130A/JNWTR_RES2.sym # of pins=3
 ** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES2.sym
 ** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES2.sch
@@ -352,50 +270,6 @@ XR1_3 P INT_2 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
 *.iopin B
 XR1_0 INT_0 N B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
 XR1_1 P INT_0 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-.ends
-
-
-* expanding   symbol:  JNW_TR_SKY130A/JNWTR_RES8.sym # of pins=3
-** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES8.sym
-** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES8.sch
-.subckt JNWTR_RES8 N P B
-*.iopin N
-*.iopin P
-*.iopin B
-XR1_0 INT_0 N B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_1 INT_1 INT_0 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_2 INT_2 INT_1 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_3 INT_3 INT_2 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_4 INT_4 INT_3 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_5 INT_5 INT_4 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_6 INT_6 INT_5 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_7 P INT_6 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-.ends
-
-
-* expanding   symbol:  JNW_TR_SKY130A/JNWTR_RES16.sym # of pins=3
-** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES16.sym
-** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES16.sch
-.subckt JNWTR_RES16 N P B
-*.iopin N
-*.iopin P
-*.iopin B
-XR1_0 INT_0 N B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_1 INT_1 INT_0 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_2 INT_2 INT_1 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_3 INT_3 INT_2 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_4 INT_4 INT_3 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_5 INT_5 INT_4 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_6 INT_6 INT_5 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_7 INT_7 INT_6 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_8 INT_8 INT_7 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_9 INT_9 INT_8 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_10 INT_10 INT_9 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_11 INT_11 INT_10 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_12 INT_12 INT_11 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_13 INT_13 INT_12 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_14 INT_14 INT_13 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
-XR1_15 P INT_14 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
 .ends
 
 .end

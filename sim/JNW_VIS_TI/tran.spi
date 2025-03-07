@@ -30,6 +30,8 @@ VSENS I_TEMP 0 dc 0.5
 
 RSH LPO LPI 1u
 
+.ic V(LPI)=0.5
+
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
@@ -55,12 +57,12 @@ optran 0 0 0 1n 1u 0
 set fend = .raw
 #ifdef Nosweep
     option temp=27
-    tran 5n 1000n 1p
+    tran 10n 1000n 1p
     write
 #else
     foreach vtemp {temp_sweep}
         option temp=$vtemp
-        tran 5n 1000n 1p
+        tran 10n 1000n 1p
         write {cicname}_$vtemp$fend
     end
 #endif

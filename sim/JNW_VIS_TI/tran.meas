@@ -12,12 +12,12 @@ foreach vtemp {temp_sweep}
 #endif
     echo "LINE_SHIFT"
     echo "LINE_SHIFT"
-    echo "LINE_SHIFT"
+
     set fend = .raw
     load {cicname}_$vtemp$fend
 
-    meas tran i_temp$vtemp find i(VSENS) at=1000n
-    meas tran vref$vtemp find v(VREF) at=1000n
+    meas tran i_temp$vtemp find i(VSENS) at=900n
+    meas tran vref$vtemp find v(VREF) at=900n
 
 end
 

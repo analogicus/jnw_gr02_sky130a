@@ -37,30 +37,30 @@ for filename in os.listdir(folder_path):
         all_vref_values.append(sorted_vref_values)
 
         # Add labels for the curves based on the file name
-        curve_labels_i_temp.append(f"{name} i_temp")
-        curve_labels_vref.append(f"{name} vref")
+        #curve_labels_i_temp.append(f"{name} i_temp")
+        #curve_labels_vref.append(f"{name} vref")
 
 # Create a single plot to combine all the data
 fig, axs = plt.subplots(2, 1, figsize=(10, 8))
 
 # Plot all i_temp values (temperature current) on the same axis
-for i_temp_values, label in zip(all_i_temp_values, curve_labels_i_temp):
-    axs[0].plot(all_temp, i_temp_values, label=label)
+for i_temp_values in all_i_temp_values:
+    axs[0].plot(all_temp, i_temp_values)
 
 axs[0].set_title("Temperature Current (i_temp)")
 axs[0].set_xlabel("Temperature (°C)")
 axs[0].set_ylabel("Current")
-axs[0].legend()  # To add a legend for each line
+#axs[0].legend()  # To add a legend for each line
 axs[0].grid(True, linestyle='--', alpha=0.6)
 
 # Plot all vref values on the same axis
-for vref_values, label in zip(all_vref_values, curve_labels_vref):
-    axs[1].plot(all_temp, vref_values, label=label)
+for vref_values in all_vref_values:
+    axs[1].plot(all_temp, vref_values)
 
 axs[1].set_title("Vref")
 axs[1].set_xlabel("Temperature (°C)")
 axs[1].set_ylabel("Vref")
-axs[1].legend()  # To add a legend for each line
+#axs[1].legend()  # To add a legend for each line
 axs[1].grid(True, linestyle='--', alpha=0.6)
 
 # Tight layout to prevent overlapping of labels
