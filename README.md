@@ -18,7 +18,7 @@ Group2
 - The module also generates a "stable" voltage reference of around 1.15V.  
 - For the nice plot you need to run the temp_tran_combine.py and the image will appear in the folder. It combines all simulations without Nosweep at the end.  
 - Taking care to have small current, to achieve as much time between capacitor resets with the smallest capacitors as possible
-- The plots show the current and v_ref done from etc simulation
+- The plots show the current and v_ref done from typical, etc and mc simulation
 
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/combined_plot.png?raw=true)
 
@@ -26,7 +26,7 @@ Group2
 
 | f3db            |  gm_db | lf_gain | pm_deg | ug  |
 | :-              |  :-:   |  :-:    |  :-:   | :-: |
-| 292.715 kHz       |  -11.54   |  33.98    |  57.49   | 14.334 MHz |
+| 297.425 kHz       |  -12.26   |  38.125    |  63.82   | 23.828 MHz |
 
 - **LOOP GAIN**  
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/lstb_schgtkttttvtnosweep_loop_gain.png?raw=true)  
