@@ -1,0 +1,82 @@
+*TB_SUN_TR_SKY130NM/TB_NCM
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+#ifdef Lay
+.include ../../../work/lpe/JNW_GR02_lpe.spi
+#else
+.include ../../../work/xsch/JNW_GR02.spice
+#endif
+
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+.option TNOM=27 GMIN=1e-15 reltol=1e-3 method=gear
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param TRF = 10p
+.param AVDD = {vdda}
+.param PERIOD_CLK = 100p
+.param PW_CLK = PERIOD_CLK/2
+
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS  VSS  0     dc 0
+VDD  VDD_1V8  VSS  dc 1.8
+VPUP PWRUP_1V8 VSS PULSE ( 0 1.8 1ns 1ps 1ps 1ns 1s 1)
+VCLK CLK VSS PULSE (0 1.8 11ps 2ps 2ps {PW_CLK} {PERIOD_CLK})
+
+VNRST N_RST VSS PULSE ( 0 1.8 1ns 1ps 1ps 1ns 1s 1)
+VRESET RESET CAP_RESET 0
+
+RSH LPO LPI 1u
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+.include ../xdut.spi
+.include ../svinst.spi
+*----------------------------------------------------------------
+* PROBE
+*----------------------------------------------------------------
+.save all i(VSENS) v(VREF)
+
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+.control
+set num_threads=8
+set color0=white
+set color1=black
+unset askquit
+
+*optran 0 0 0 1n 1u 0
+
+
+*- Override the default digital output bridge.
+pre_set auto_bridge_d_out =
+     + ( ".model auto_dac dac_bridge(out_low = 0.0 out_high = 1.8)"
+     +   "auto_bridge%d [ %s ] [ %s ] auto_dac" )
+
+set fend = .raw
+#ifdef Nosweep
+        option temp=27
+        tran 1n 200n 1p
+        write
+#else
+        foreach vtemp {temp_sweep}
+                option temp=$vtemp
+                tran 1n 100n 1p
+                write {cicname}_$vtemp$fend
+        end
+#endif
+quit
+
+
+.endc
+
+.end

@@ -1,0 +1,12 @@
+* Measure JNW_VIS_TI
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+
+meas dc isens FIND i(VSENS)
+
+echo "MEAS_END"
+.endc

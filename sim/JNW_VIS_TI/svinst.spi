@@ -1,0 +1,21 @@
+*Automatic generated instance fron ../../tech/scripts/genxdut dig
+adut [clk
++ n_rst
++ ]
++ [pwm_out
++ reset
++ ] null dut
+.model dut d_cosim simulation="../dig.so" delay=10p
+
+* Inputs
+Rsvi0 clk 0 1G
+Rsvi1 n_rst 0 1G
+
+* Outputs
+Rsvi2 pwm_out 0 1G
+Rsvi3 reset 0 1G
+
+.save v(pwm_out)
+
+.save v(reset)
+

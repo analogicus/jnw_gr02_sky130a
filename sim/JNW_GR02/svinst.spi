@@ -1,0 +1,51 @@
+*Automatic generated instance fron ../../tech/scripts/genxdut dig
+adut [clk
++ n_rst
++ trigger
++ ]
++ [pwm_out
++ reset
++ counter.7
++ counter.6
++ counter.5
++ counter.4
++ counter.3
++ counter.2
++ counter.1
++ counter.0
++ ] null dut
+.model dut d_cosim simulation="../dig.so" delay=10p
+
+* Inputs
+Rsvi0 clk 0 1G
+Rsvi1 n_rst 0 1G
+Rsvi2 trigger 0 1G
+
+* Outputs
+Rsvi3 pwm_out 0 1G
+Rsvi4 reset 0 1G
+Rsvi5 counter.7 0 1G
+Rsvi6 counter.6 0 1G
+Rsvi7 counter.5 0 1G
+Rsvi8 counter.4 0 1G
+Rsvi9 counter.3 0 1G
+Rsvi10 counter.2 0 1G
+Rsvi11 counter.1 0 1G
+Rsvi12 counter.0 0 1G
+
+.save v(pwm_out)
+
+.save v(reset)
+
+E_STATE_counter dec_counter 0 value={( 0 
++ + 128*v(counter.7)/AVDD
++ + 64*v(counter.6)/AVDD
++ + 32*v(counter.5)/AVDD
++ + 16*v(counter.4)/AVDD
++ + 8*v(counter.3)/AVDD
++ + 4*v(counter.2)/AVDD
++ + 2*v(counter.1)/AVDD
++ + 1*v(counter.0)/AVDD
++)/1000}
+.save v(dec_counter)
+
