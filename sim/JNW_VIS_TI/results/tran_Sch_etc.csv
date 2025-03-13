@@ -1,9 +1,9 @@
 ,vref27,i_temp27,name,type,time,OK
-0,1.17819,3.920363,tran_SchGtKfsTlVtNosweep,Sch,Fri Mar  7 17:30:45 2025,True
-1,1.18013,3.739003,tran_SchGtKsfTlVtNosweep,Sch,Fri Mar  7 17:30:44 2025,True
-2,1.182123,4.4795169999999995,tran_SchGtKffTlVtNosweep,Sch,Fri Mar  7 17:30:43 2025,True
-3,1.176324,3.297432,tran_SchGtKssTlVtNosweep,Sch,Fri Mar  7 17:30:41 2025,True
-4,1.17819,3.920363,tran_SchGtKfsThVtNosweep,Sch,Fri Mar  7 17:30:40 2025,True
-5,1.18013,3.739003,tran_SchGtKsfThVtNosweep,Sch,Fri Mar  7 17:30:39 2025,True
-6,1.182123,4.4795169999999995,tran_SchGtKffThVtNosweep,Sch,Fri Mar  7 17:30:38 2025,True
-7,1.176324,3.297432,tran_SchGtKssThVtNosweep,Sch,Fri Mar  7 17:30:37 2025,True
+0,1.199144,4.065500999999999,tran_SchGtKfsTlVtNosweep,Sch,Thu Mar 13 12:17:28 2025,True
+1,1.202491,3.8881,tran_SchGtKsfTlVtNosweep,Sch,Thu Mar 13 12:17:28 2025,True
+2,1.20342,4.648588,tran_SchGtKffTlVtNosweep,Sch,Thu Mar 13 12:17:28 2025,True
+3,1.197786,3.4239450000000002,tran_SchGtKssTlVtNosweep,Sch,Thu Mar 13 12:17:28 2025,True
+4,1.199144,4.065500999999999,tran_SchGtKfsThVtNosweep,Sch,Thu Mar 13 12:17:28 2025,True
+5,1.202491,3.8881,tran_SchGtKsfThVtNosweep,Sch,Thu Mar 13 12:17:28 2025,True
+6,1.20342,4.648588,tran_SchGtKffThVtNosweep,Sch,Thu Mar 13 12:17:28 2025,True
+7,1.197786,3.4239450000000002,tran_SchGtKssThVtNosweep,Sch,Thu Mar 13 12:17:28 2025,True

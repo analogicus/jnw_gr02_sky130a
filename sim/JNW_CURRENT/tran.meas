@@ -1,0 +1,14 @@
+* Measure JNW_CURRENT
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+meas tran i_v1 find i(V1) at=100n
+meas tran i_v2 find i(V2) at=100n
+meas tran i_v3 find i(V3) at=100n
+meas tran i_v4 find i(V4) at=100n
+
+echo "MEAS_END"
+.endc

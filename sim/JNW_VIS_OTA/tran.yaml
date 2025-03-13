@@ -1,0 +1,10 @@
+offset:
+  src:
+    - offset
+  typ: 0
+#  name: <long name>
+  min: -50
+  max: 50
+  scale: 1e3
+  digits: 3
+  unit: mV
