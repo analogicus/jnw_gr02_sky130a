@@ -45,6 +45,14 @@ Group2
 - Bellow is an image of Vcap and Vout signal, Vref is around 1.15V. The Vcap is reset twice in this figure. The speed of reset is way higher than it will be in the end design. Quick calculation lands us that f_rst will be less than 150kHz. In this simulation is 1MHz
 
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_ITIME/Vcap_Vout.png?raw=true) 
+
+**svinst.spi - time to digital output**
+- Using verilog code to generate a clock divider and a register to find out and mark when Vcap is larger than Vref.
+- dividing the input clock to 1/256.
+- send RST signal to JNW_VIS_ITIME when clock counts to 256.
+- stores the clock value when Vcap is larger than Vref, and give this as output.
+>[!error] current verilog implementaiton uses to much time to simulate in ngspice. It may be hard to do mixed simulation.   
+
 ---
 
 # How
@@ -78,16 +86,17 @@ Group2
 | Signal       | Direction | Domain  | Description                               |
 | :---         | :---:     | :---:   | :---                                      |
 | VDD_1V8         | Input     | VDD_1V8 | Main supply                              |
-| VSS         | Input     | Ground  |                                           |
-| PWRUP_1V8     | Input    | VDD_1V8 | Power up the circuit                       |
-| VREF     | Output    | VDD_1V8 | Voltage referance of around 1.15V                       |
-| ISENS     | Output    | VDD_1V8 | Current dependant on the temperature                       |
+| VSS             | Input     | Ground  |                                          |
+| CLK             | Input     | CDD_1V8 | Clocking signal                          |
+| PWRUP_1V8       | Input     | VDD_1V8 | Power up the circuit                     |
+| VREF            | Output    | VDD_1V8 | Voltage referance of around 1.15V        |
+| ISENS           | Output    | VDD_1V8 | Current dependant on the temperature     |
 
 
 # Key parameters
 
-| Parameter           | Min     | Typ           | Max     | Unit  |
-| :---                | :---:     | :---:           | :---:     | :---: |
-| Technology          |         | Skywater 130 nm |         |       |
-| AVDD                | 1.7    | 1.8           | 1.9    | V     |
-| Temperature         | -40     | 27            | 130     | C     |
+| Parameter   | Min   | Typ             | Max   | Unit  |
+| :---        | :---: | :---:           | :---: | :---: |
+| Technology  |       | Skywater 130 nm |       |       |
+| AVDD        | 1.7   | 1.8             | 1.9   | V     |
+| Temperature | -40   | 27              | 130   | C     |
