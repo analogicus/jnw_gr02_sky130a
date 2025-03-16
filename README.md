@@ -79,12 +79,19 @@ Group2
 
 **svinst.spi - time to digital output**
 - Using verilog code to generate a clock divider and a register to find out and mark when Vcap is larger than Vref.
+  - code is located in rtl/dig.v 
 - dividing the input clock to 1/256.
+  - output resolution is 8 bit maximum, but probably much less. 
 - send RST signal to JNW_VIS_ITIME when clock counts to 256.
 - stores the clock value when Vcap is larger than Vref, and give this as output.
 > [!CAUTION]
-> current verilog implementation uses to much time to simulate in ngspice. It may not be feasible mixed simulation.   
+> current verilog implementation uses to much time to simulate in ngspice. It may not be feasible mixed simulation.
 
+
+The current implementation does not implement scaling. since the expected current range is approx. 2e-6A to 6e-6A ( see earlier figure), the range where Vcap is larger than Vref is from a couple of cycles up to a maximum. Meaning that we can expect it to be on the form: 
+$I= C \cdot \frac{dV}{dt] \arrowright \approx \Delta t = C \cdot \frac{\Delta >V}{I}  
+
+Meaning it is expected that the output is somewhat inverse proportional.
 ---
 
 # How
