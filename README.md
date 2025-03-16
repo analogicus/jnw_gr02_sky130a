@@ -106,24 +106,37 @@ Meaning it is expected that the output is somewhat inverse proportional to the c
 - To fine-tune the reference voltage, we played with resistances.  
 - We tried to reduce the current as much as possible to get more time between resets of the capacitor  
 
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/Figures/AIC_JNW_VIS_TI.png?raw=true) 
+
 **JNW_VIS_OTA - Current mirror OTA**  
 - Following the class and the AIC book. 
 - Designed an OPAMP 
 - Taking care to be in `gmid = 10` with the current mirrors and output transistors.  
 - Having a hard time with the current mirror being in the triode region. We then used the short channel PMOS's  
 
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/Figures/AIC_JNW_VIS_OTA.png?raw=true)  
+
+**JNW_VIS_ITIME - Current to Time conversion**
+- Following the class and the AIC book.  
+- Basic design using an OTA, reset switch and capacitor
+- Always comparing capacitor voltage(filling up with current from **JNW_VIS_TI**) and referance voltage(from **JNW_VIS_TI**)
+
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/Figures/AIC_JNW_VIS_ITIME.png?raw=true)  
 
 # What
 
 | What            |        Cell/Name |
 | :-              |  :-:       |
-| Schematic       | design/JNW_GR02_SKY130A/JJNW_VIS_TI.sch |
+| Schematic       | design/JNW_GR02_SKY130A/JNW_VIS_TI.sch |
+| Schematic       | design/JNW_GR02_SKY130A/JNW_VIS_ITIME.sch |
+| Schematic       | design/JNW_GR02_SKY130A/JNW_VIS_OTA.sch |
 
 
 # Changelog/Plan
 
 | Version | Status | Comment|
 | :---| :---| :---|
+|0.2.0 | :x: | Temperature to current, current to time |
 |0.1.0 | :x: | The first module works linearly |
 
 
@@ -146,3 +159,9 @@ Meaning it is expected that the output is somewhat inverse proportional to the c
 | Technology  |       | Skywater 130 nm |       |       |
 | AVDD        | 1.7   | 1.8             | 1.9   | V     |
 | Temperature | -40   | 27              | 130   | C     |
+
+| Parameter           | Min     | Typ           | Max     | Unit  |
+| :---                | :---:     | :---:           | :---:     | :---: |
+| Technology          |         | Skywater 130 nm |         |       |
+| AVDD                | 1.7    | 1.8           | 1.9    | V     |
+| Temperature         | -20     | 27            | 130     | C     |
