@@ -83,7 +83,7 @@ Group2
 - send RST signal to JNW_VIS_ITIME when clock counts to 256.
 - stores the clock value when Vcap is larger than Vref, and give this as output.
 > [!CAUTION]
-> current verilog implementaiton uses to much time to simulate in ngspice. It may be hard to do mixed simulation.   
+> current verilog implementation uses to much time to simulate in ngspice. It may not be feasible mixed simulation.   
 
 ---
 
