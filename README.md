@@ -88,10 +88,12 @@ Group2
 > current verilog implementation uses to much time to simulate in ngspice. It may not be feasible mixed simulation.
 
 
-The current implementation does not implement scaling. since the expected current range is approx. 2e-6A to 6e-6A ( see earlier figure), the range where Vcap is larger than Vref is from a couple of cycles up to a maximum. Meaning that we can expect it to be on the form: 
-$I= C \cdot \frac{dV}{dt} \rightarrow \approx \Delta t = C \cdot \frac{\Delta V}{I}$ 
+The current implementation does not implement scaling. since the expected current range is approx. 2e-6A to 6e-6A ( see earlier figure), the range where Vcap is larger than Vref is from a couple of cycles up to a maximum. The description of how a long it will take to get a voltage change over a capacitor can be written as: 
+```math
+I= C \cdot \frac{dV}{dt} \rightarrow \approx \Delta t = C \cdot \frac{\Delta V}{I}
+```
+Meaning it is expected that the output is somewhat inverse proportional to the current, and therefore temperature.
 
-Meaning it is expected that the output is somewhat inverse proportional.
 ---
 
 # How
