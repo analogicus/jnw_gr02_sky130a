@@ -17,8 +17,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vlng___024root final : public VerilatedModule
     VL_IN8(clk,0,0);
     VL_IN8(n_rst,0,0);
     VL_IN8(trigger,0,0);
-    VL_OUT8(pwm_out,0,0);
     VL_OUT8(reset,0,0);
+    VL_OUT8(counter_out,7,0);
     VL_OUT8(counter,7,0);
     CData/*0:0*/ __Vtrigprevexpr___TOP__clk__0;
     CData/*0:0*/ __VactContinue;

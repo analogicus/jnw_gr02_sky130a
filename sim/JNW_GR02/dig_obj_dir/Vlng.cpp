@@ -12,8 +12,8 @@ Vlng::Vlng(VerilatedContext* _vcontextp__, const char* _vcname__)
     , clk{vlSymsp->TOP.clk}
     , n_rst{vlSymsp->TOP.n_rst}
     , trigger{vlSymsp->TOP.trigger}
-    , pwm_out{vlSymsp->TOP.pwm_out}
     , reset{vlSymsp->TOP.reset}
+    , counter_out{vlSymsp->TOP.counter_out}
     , counter{vlSymsp->TOP.counter}
     , rootp{&(vlSymsp->TOP)}
 {

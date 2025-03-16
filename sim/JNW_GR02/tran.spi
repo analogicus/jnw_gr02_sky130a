@@ -18,7 +18,7 @@
 *-----------------------------------------------------------------
 .param TRF = 10p
 .param AVDD = {vdda}
-.param PERIOD_CLK = 100p
+.param PERIOD_CLK = 30n
 .param PW_CLK = PERIOD_CLK/2
 
 *-----------------------------------------------------------------
@@ -26,8 +26,9 @@
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
 VDD  VDD_1V8  VSS  dc 1.8
-VPUP PWRUP_1V8 VSS PULSE ( 0 1.8 1ns 1ps 1ps 1ns 1s 1)
-VCLK CLK VSS PULSE (0 1.8 11ps 2ps 2ps {PW_CLK} {PERIOD_CLK})
+VPUP PWRUP_1V8 VSS PULSE ( 0 1.8 1ns 0ps 0ps 1ns 1s 1)
+VCLK CLK VSS PULSE (0 1.8 11ps 2ns 2ns {PW_CLK} {PERIOD_CLK})
+*VCLK CLK VSS dc 1 
 
 VNRST N_RST VSS PULSE ( 0 1.8 1ns 1ps 1ps 1ns 1s 1)
 VRESET RESET CAP_RESET 0
@@ -65,12 +66,12 @@ pre_set auto_bridge_d_out =
 set fend = .raw
 #ifdef Nosweep
         option temp=27
-        tran 1n 200n 1p
+        tran 1n 200n 500p
         write
 #else
         foreach vtemp {temp_sweep}
                 option temp=$vtemp
-                tran 1n 100n 1p
+                tran 1n 100n 100p
                 write {cicname}_$vtemp$fend
         end
 #endif

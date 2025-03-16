@@ -76,8 +76,8 @@ VL_ATTR_COLD void Vlng___024root___ctor_var_reset(Vlng___024root* vlSelf) {
     vlSelf->clk = VL_RAND_RESET_I(1);
     vlSelf->n_rst = VL_RAND_RESET_I(1);
     vlSelf->trigger = VL_RAND_RESET_I(1);
-    vlSelf->pwm_out = VL_RAND_RESET_I(1);
     vlSelf->reset = VL_RAND_RESET_I(1);
+    vlSelf->counter_out = VL_RAND_RESET_I(8);
     vlSelf->counter = VL_RAND_RESET_I(8);
     vlSelf->__Vtrigprevexpr___TOP__clk__0 = VL_RAND_RESET_I(1);
 }

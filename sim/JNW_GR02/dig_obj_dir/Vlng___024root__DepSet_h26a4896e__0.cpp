@@ -36,17 +36,15 @@ VL_INLINE_OPT void Vlng___024root___nba_sequent__TOP__0(Vlng___024root* vlSelf) 
     // Body
     __Vdly__counter = vlSelfRef.counter;
     if (vlSelfRef.n_rst) {
+        vlSelfRef.reset = 1U;
         __Vdly__counter = 0U;
-        vlSelfRef.reset = 1U;
-    } else if ((0xfaU >= (IData)(vlSelfRef.counter))) {
-        __Vdly__counter = (0xffU & ((IData)(1U) + (IData)(vlSelfRef.counter)));
-        vlSelfRef.reset = 0U;
-    } else if ((0xfcU >= (IData)(vlSelfRef.counter))) {
-        __Vdly__counter = (0xffU & ((IData)(1U) + (IData)(vlSelfRef.counter)));
-        vlSelfRef.reset = 1U;
+        vlSelfRef.counter_out = 0U;
     } else {
-        __Vdly__counter = 0U;
-        vlSelfRef.reset = 1U;
+        vlSelfRef.reset = 0U;
+        if (vlSelfRef.trigger) {
+            vlSelfRef.counter_out = vlSelfRef.counter;
+        }
+        __Vdly__counter = (0xffU & ((IData)(1U) + (IData)(vlSelfRef.counter)));
     }
     vlSelfRef.counter = __Vdly__counter;
 }
@@ -111,7 +109,7 @@ void Vlng___024root___eval(Vlng___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vlng___024root___dump_triggers__nba(vlSelf);
 #endif
-            VL_FATAL_MT("../../rtl/dig.v", 1, "", "NBA region did not converge.");
+            VL_FATAL_MT("../../rtl/dig.v", 2, "", "NBA region did not converge.");
         }
         __VnbaIterCount = ((IData)(1U) + __VnbaIterCount);
         __VnbaContinue = 0U;
@@ -122,7 +120,7 @@ void Vlng___024root___eval(Vlng___024root* vlSelf) {
 #ifdef VL_DEBUG
                 Vlng___024root___dump_triggers__act(vlSelf);
 #endif
-                VL_FATAL_MT("../../rtl/dig.v", 1, "", "Active region did not converge.");
+                VL_FATAL_MT("../../rtl/dig.v", 2, "", "Active region did not converge.");
             }
             vlSelfRef.__VactIterCount = ((IData)(1U) 
                                          + vlSelfRef.__VactIterCount);
