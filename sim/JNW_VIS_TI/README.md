@@ -8,12 +8,12 @@ Check transient operation
 
 |**Name**|**Parameter**|**Description**| |**Min**|**Typ**|**Max**| Unit|
 |:---|:---|:---|---:|:---:|:---:|:---:| ---:|
-|**Referance Voltage**|**vref27** || **Spec**  | **0.93000** | **1.24000** | **1.55000** | **V** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.17904 |  | |
-| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|1.17632 | 1.17916 | 1.18212 | |
-| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|1.02889 | 1.17691 | 1.32493 | |
-|**Temperature current**|**i\_temp27** || **Spec**  | **2.85000** | **3.80000** | **4.75000** | **uA** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 3.83716 |  | |
-| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|3.29743 | 3.82968 | 4.47952 | |
-| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**2.70687**</span> | 3.85007 | <span style='color:red'>**4.99328**</span> | |
+|**Referance Voltage**|**vref27** || **Spec**  | **0.90000** | **1.20000** | **1.50000** | **V** |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.20066 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|1.19779 | 1.20082 | 1.20342 | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|1.07695 | 1.20448 | 1.33201 | |
+|**Temperature current**|**i\_temp27** || **Spec**  | **3.00000** | **4.00000** | **5.00000** | **uA** |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 3.98492 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|3.42394 | 3.97680 | 4.64859 | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|3.07677 | 4.00629 | 4.93581 | |
 

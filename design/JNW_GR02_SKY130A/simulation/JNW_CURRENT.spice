@@ -1,0 +1,146 @@
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_GR02_SKY130A/JNW_CURRENT.sch
+**.subckt JNW_CURRENT
+XQ1<0> VSS VSS V_M2N sky130_fd_pr__pnp_05v5_W3p40L3p40 m=1 mult=1
+XQ2<0> VSS VSS VD2 sky130_fd_pr__pnp_05v5_W3p40L3p40 m=8 mult=8
+x1<0> V_Bias VSS JNWTR_CAPX1
+x1<1> V_Bias VSS JNWTR_CAPX1
+x1<2> V_Bias VSS JNWTR_CAPX1
+x1<3> V_Bias VSS JNWTR_CAPX1
+x1<4> V_Bias VSS JNWTR_CAPX1
+x1<5> V_Bias VSS JNWTR_CAPX1
+x1<6> V_Bias VSS JNWTR_CAPX1
+x1<7> V_Bias VSS JNWTR_CAPX1
+x1<8> V_Bias VSS JNWTR_CAPX1
+x1<9> V_Bias VSS JNWTR_CAPX1
+x9 V_M1N V_Bias VSS VSS JNWATR_NCH_12C5F0
+x3<0> V_M1P V_MEAS3 V_MEAS2 V_MEAS2 JNWATR_PCH_4C5F0
+x3<1> V_M1P V_MEAS3 V_MEAS2 V_MEAS2 JNWATR_PCH_4C5F0
+x3<2> V_M1P V_MEAS3 V_MEAS2 V_MEAS2 JNWATR_PCH_4C5F0
+x4<0> V_MEAS4 V_M1P VDD VDD JNWATR_PCH_4C5F0
+x4<1> V_MEAS4 V_M1P VDD VDD JNWATR_PCH_4C5F0
+x4<2> V_MEAS4 V_M1P VDD VDD JNWATR_PCH_4C5F0
+x5<0> V_M3P V_MEAS3 V_MEAS4 V_MEAS4 JNWATR_PCH_4C5F0
+x5<1> V_M3P V_MEAS3 V_MEAS4 V_MEAS4 JNWATR_PCH_4C5F0
+x5<2> V_M3P V_MEAS3 V_MEAS4 V_MEAS4 JNWATR_PCH_4C5F0
+x15 V_MEAS3 V_MEAS3 VDD VDD JNWATR_PCH_2C5F0
+x6<0> net2<2> V_M1P VDD VDD JNWATR_PCH_4C5F0
+x6<1> net2<1> V_M1P VDD VDD JNWATR_PCH_4C5F0
+x6<2> net2<0> V_M1P VDD VDD JNWATR_PCH_4C5F0
+x8<0> V_M4P V_MEAS3 net2<2> net2<2> JNWATR_PCH_4C5F0
+x8<1> V_M4P V_MEAS3 net2<1> net2<1> JNWATR_PCH_4C5F0
+x8<2> V_M4P V_MEAS3 net2<0> net2<0> JNWATR_PCH_4C5F0
+x7<0> net1<2> V_M1P VDD VDD JNWATR_PCH_4C5F0
+x7<1> net1<1> V_M1P VDD VDD JNWATR_PCH_4C5F0
+x7<2> net1<0> V_M1P VDD VDD JNWATR_PCH_4C5F0
+x10<0> V_M2P V_MEAS3 net1<2> net1<2> JNWATR_PCH_4C5F0
+x10<1> V_M2P V_MEAS3 net1<1> net1<1> JNWATR_PCH_4C5F0
+x10<2> V_M2P V_MEAS3 net1<0> net1<0> JNWATR_PCH_4C5F0
+x14 net3 V_REF VSS JNWTR_RPPO2
+x12<0> net5<1> net3 VSS JNWTR_RPPO2
+x12<1> net5<0> net3 VSS JNWTR_RPPO2
+x13<0> VD2 VIP VSS JNWTR_RPPO2
+x13<1> VD2 VIP VSS JNWTR_RPPO2
+x13<2> VD2 VIP VSS JNWTR_RPPO2
+x13<3> VD2 VIP VSS JNWTR_RPPO2
+x9<0> net4<1> V_MEAS3 VSS JNWTR_RPPO2
+x9<1> net4<0> V_MEAS3 VSS JNWTR_RPPO2
+x15<0> VSS net4<1> VSS JNWTR_RPPO2
+x15<1> VSS net4<0> VSS JNWTR_RPPO2
+x14<0> VIP net5<1> VSS JNWTR_RPPO2
+x14<1> VIP net5<0> VSS JNWTR_RPPO2
+x11<0> V_M4P V_M1P VDD VDD JNWATR_PCH_4C5F0
+x11<1> V_M4P V_M1P VDD VDD JNWATR_PCH_4C5F0
+x11<2> V_M4P V_M1P VDD VDD JNWATR_PCH_4C5F0
+x2<0> V_MEAS2 V_M1P VDD VDD JNWATR_PCH_4C5F0
+x2<1> V_MEAS2 V_M1P VDD VDD JNWATR_PCH_4C5F0
+x2<2> V_MEAS2 V_M1P VDD VDD JNWATR_PCH_4C5F0
+V1 V_M1P V_M1N 0
+.save i(v1)
+V2 V_M2P V_M2N 0
+.save i(v2)
+V3 V_M3P V_REF 0
+.save i(v3)
+V4 V_M4P VSS 0
+.save i(v4)
+V5 V_M4P VSS 0
+.save i(v5)
+V6 V_Bias VSS 0.75
+.save i(v6)
+V7 V_REF VSS 1.2
+.save i(v7)
+VDD VDD VSS 1.8
+.save i(vdd)
+**.ends
+
+* expanding   symbol:  JNW_TR_SKY130A/JNWTR_CAPX1.sym # of pins=2
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_CAPX1.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_CAPX1.sch
+.subckt JNWTR_CAPX1 A B
+*.iopin A
+*.iopin B
+XC1 B A sky130_fd_pr__cap_mim_m3_1 W=5 L=5 MF=1 m=1
+.ends
+
+
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sym # of pins=4
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sch
+.subckt JNWATR_NCH_12C5F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__nfet_01v8 L=0.94 W=8.32 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym # of pins=4
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sch
+.subckt JNWATR_PCH_4C5F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.94 W=3.2 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sym # of pins=4
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sch
+.subckt JNWATR_PCH_2C5F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.94 W=1.92 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  JNW_TR_SKY130A/JNWTR_RPPO2.sym # of pins=3
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO2.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO2.sch
+.subckt JNWTR_RPPO2 N P B
+*.iopin P
+*.iopin N
+*.iopin B
+XXA1 N P B JNWTR_RES2
+.ends
+
+
+* expanding   symbol:  JNW_TR_SKY130A/JNWTR_RES2.sym # of pins=3
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES2.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES2.sch
+.subckt JNWTR_RES2 N P B
+*.iopin N
+*.iopin P
+*.iopin B
+XR1_0 INT_0 N B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_1 P INT_0 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+.ends
+
+.end

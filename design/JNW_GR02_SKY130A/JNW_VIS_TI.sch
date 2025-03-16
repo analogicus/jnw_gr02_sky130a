@@ -150,18 +150,25 @@ N 210 -870 210 -720 {lab=VDD}
 N 170 -870 210 -870 {lab=VDD}
 N -0 -470 0 330 {lab=VSS}
 N 130 -780 130 -720 {lab=V_MEAS1}
-N 170 -690 170 -650 {lab=I_TEMP}
+N 170 -690 170 -650 {lab=#net5}
 N 140 -870 170 -870 {lab=VDD}
 N -40 -780 130 -780 {lab=V_MEAS1}
 N 30 -870 30 -720 {lab=VDD}
-N -170 -10 -170 10 {lab=#net5}
+N -170 -10 -170 10 {lab=#net6}
 N -400 -20 -400 20 {lab=VIP}
 N -170 140 -170 150 {lab=VIP}
-N -170 10 -170 20 {lab=#net5}
+N -170 10 -170 20 {lab=#net6}
 N -230 60 -190 60 {lab=VSS}
 N -170 100 -170 140 {lab=VIP}
 N -400 20 -400 110 {lab=VIP}
 N -400 110 -170 110 {lab=VIP}
+N 170 -650 170 -630 {lab=#net5}
+N 130 -660 130 -600 {lab=V_MEAS3}
+N -40 -660 130 -660 {lab=V_MEAS3}
+N 170 -570 170 -530 {lab=I_TEMP}
+N 170 -600 210 -600 {lab=#net5}
+N 210 -650 210 -600 {lab=#net5}
+N 170 -650 210 -650 {lab=#net5}
 C {devices/ipin.sym} -1200 330 0 0 {name=p2 lab=VSS
 }
 C {sky130_fd_pr/pnp_05v5.sym} -540 280 0 0 {name=Q1[0]
@@ -179,7 +186,7 @@ C {devices/opin.sym} -140 -300 0 0 {name=p3 lab=VREF}
 C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -650 280 0 1 {name=x11[0:1] }
 C {devices/ipin.sym} -650 200 0 1 {name=p5 lab=PWR_UP
 }
-C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} -800 310 0 0 {name=x1[0:9]}
+C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} -800 310 0 0 {name=x1[0:19]}
 C {devices/lab_wire.sym} -170 130 0 0 {name=p6 sig_type=std_logic lab=VIP}
 C {devices/lab_wire.sym} -520 -60 0 0 {name=p7 sig_type=std_logic lab=VIN}
 C {JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sym} -850 240 0 1 {name=x9}
@@ -205,7 +212,8 @@ C {JNW_TR_SKY130A/JNWTR_RPPO2.sym} -170 150 1 0 {name=x13[0:3]}
 C {JNW_TR_SKY130A/JNWTR_RPPO2.sym} -1100 -360 1 0 {name=x9[0:1]}
 C {JNW_TR_SKY130A/JNWTR_RPPO2.sym} -1100 -260 1 0 {name=x15[0:1]}
 C {devices/lab_wire.sym} -990 -600 0 0 {name=p13 sig_type=std_logic lab=V_MEAS3}
-C {devices/opin.sym} 170 -650 1 0 {name=p4 lab=I_TEMP}
+C {devices/opin.sym} 170 -530 1 0 {name=p4 lab=I_TEMP}
 C {JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sym} 130 -720 0 0 {name=x2}
 C {devices/lab_wire.sym} -170 -670 0 0 {name=p14 sig_type=std_logic lab=V_MEAS4}
 C {JNW_TR_SKY130A/JNWTR_RPPO2.sym} -170 20 1 0 {name=x14[0:1]}
+C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 130 -600 0 0 {name=x16[0:2] }

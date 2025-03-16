@@ -1,0 +1,19 @@
+* Measure JNW_VIS_OTA
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+echo "MEAS_FREELINE"
+echo "MEAS_FREELINE"
+echo "MEAS_FREELINE"
+
+let offset = (v(vout) - v(vin))
+
+meas tran vout avg v(vout)
+meas tran offset avg offset
+
+
+echo "MEAS_END"
+.endc
