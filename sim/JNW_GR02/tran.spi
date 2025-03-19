@@ -20,7 +20,8 @@
 .param AVDD = {vdda}
 .param PERIOD_CLK = 30n
 .param PW_CLK = PERIOD_CLK/2
-
+.param PERIOD_CAP_RESET = PERIOD_CLK*250
+.param PW_CAP_RESET = PERIOD_CAP_RESET/250
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
@@ -30,9 +31,9 @@ VPUP PWRUP_1V8 VSS PULSE ( 0 1.8 1ns 0ps 0ps 1ns 1s 1)
 VCLK CLK VSS PULSE (0 1.8 11ps 2ns 2ns {PW_CLK} {PERIOD_CLK})
 *VCLK CLK VSS dc 1 
 
-VNRST N_RST VSS PULSE ( 0 1.8 1ns 1ps 1ps 1ns 1s 1)
-VRESET RESET CAP_RESET 0
-
+*VNRST N_RST VSS PULSE ( 0 1.8 1ns 1ps 1ps 1ns 1s 1)
+*VRESET RESET CAP_RESET 0
+VCAP_RESET CAP_RESET VSS PULSE (0 1.8 11ps 2ns 2ns {PW_CAP_RESET} {PERIOD_CAP_RESET})
 RSH LPO LPI 1u
 
 *-----------------------------------------------------------------
@@ -71,7 +72,7 @@ set fend = .raw
 #else
         foreach vtemp {temp_sweep}
                 option temp=$vtemp
-                tran 1n 100n 100p
+                tran 1n 10u 100p
                 write {cicname}_$vtemp$fend
         end
 #endif

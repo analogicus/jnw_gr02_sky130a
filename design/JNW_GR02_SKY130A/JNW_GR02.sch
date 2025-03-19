@@ -26,17 +26,16 @@ N -110 -480 -100 -480 {lab=LPO}
 N -110 -460 -100 -460 {lab=LPI}
 N -110 -500 -10 -500 {lab=I_TEMP_OUT}
 N -10 -500 -10 -480 {lab=I_TEMP_OUT}
-N 30 -520 30 -500 {lab=VREF_OUT}
-N 30 -500 110 -500 {lab=VREF_OUT}
-N -10 -480 110 -480 {lab=I_TEMP_OUT}
 N 30 -330 400 -330 {lab=VREF_OUT}
-N 30 -500 30 -330 {lab=VREF_OUT}
 N -10 -480 -10 -370 {lab=I_TEMP_OUT}
 N -10 -370 400 -370 {lab=I_TEMP_OUT}
 N -720 -340 -560 -340 {lab=VSS}
 N -680 -500 -650 -500 {lab=PWRUP_1V8}
 N -720 -410 40 -410 {lab=CAP_RESET}
 N -650 -500 -550 -500 {lab=PWRUP_1V8}
+N -10 -500 110 -500 {lab=I_TEMP_OUT}
+N 30 -520 30 -330 {lab=VREF_OUT}
+N 30 -480 110 -480 {lab=VREF_OUT}
 C {devices/ipin.sym} -520 -590 0 0 {name=p1 lab=VDD_1V8}
 C {devices/ipin.sym} -720 -340 0 0 {name=p2 lab=VSS}
 C {devices/ipin.sym} -680 -500 0 0 {name=p3 lab=PWRUP_1V8}
