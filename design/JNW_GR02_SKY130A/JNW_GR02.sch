@@ -16,44 +16,56 @@ N -430 -480 -410 -480 {lab=VSS}
 N -430 -340 70 -340 {lab=VSS}
 N 70 -440 70 -340 {lab=VSS}
 N 70 -440 110 -440 {lab=VSS}
-N 410 -520 530 -520 {lab=TRIGGER}
-N 50 -460 110 -460 {lab=CAP_RESET}
+N 410 -520 530 -520 {lab=#net1}
+N 50 -460 110 -460 {lab=TRIGGER}
 N -550 -500 -410 -500 {lab=PWRUP_1V8}
-N 40 -410 50 -410 {lab=CAP_RESET}
-N 50 -460 50 -410 {lab=CAP_RESET}
-N -110 -520 30 -520 {lab=VREF_OUT}
+N 50 -460 50 -410 {lab=TRIGGER}
+N -110 -520 30 -520 {lab=I_TEMP_OUT}
 N -110 -480 -100 -480 {lab=LPO}
 N -110 -460 -100 -460 {lab=LPI}
-N -110 -500 -10 -500 {lab=I_TEMP_OUT}
-N -10 -500 -10 -480 {lab=I_TEMP_OUT}
-N 30 -330 400 -330 {lab=VREF_OUT}
-N -10 -480 -10 -370 {lab=I_TEMP_OUT}
-N -10 -370 400 -370 {lab=I_TEMP_OUT}
+N -110 -500 -10 -500 {lab=VREF_OUT}
+N -10 -500 -10 -480 {lab=VREF_OUT}
+N 30 -330 400 -330 {lab=I_TEMP_OUT}
+N -10 -480 -10 -370 {lab=VREF_OUT}
+N -10 -370 400 -370 {lab=VREF_OUT}
 N -720 -340 -560 -340 {lab=VSS}
 N -680 -500 -650 -500 {lab=PWRUP_1V8}
-N -720 -410 40 -410 {lab=CAP_RESET}
 N -650 -500 -550 -500 {lab=PWRUP_1V8}
-N -10 -500 110 -500 {lab=I_TEMP_OUT}
-N 30 -520 30 -330 {lab=VREF_OUT}
-N 30 -480 110 -480 {lab=VREF_OUT}
-N -820 -410 -720 -410 {lab=CAP_RESET}
+N -10 -500 110 -500 {lab=VREF_OUT}
+N 30 -520 30 -330 {lab=I_TEMP_OUT}
+N 30 -480 110 -480 {lab=I_TEMP_OUT}
 N -820 -410 -810 -410 {lab=CAP_RESET}
-N -830 -370 -830 -330 {lab=xxx}
-N -830 -330 -810 -330 {lab=xxx}
-N -810 -330 -810 -300 {lab=xxx}
+N 50 -390 670 -390 {lab=TRIGGER}
+N 50 -410 50 -390 {lab=TRIGGER}
+N 630 -520 860 -520 {lab=RESET_OUT}
+N 960 -520 990 -520 {lab=TRIGGER}
+N 990 -520 990 -390 {lab=TRIGGER}
+N 670 -390 990 -390 {lab=TRIGGER}
 C {devices/ipin.sym} -520 -590 0 0 {name=p1 lab=VDD_1V8}
 C {devices/ipin.sym} -720 -340 0 0 {name=p2 lab=VSS}
 C {devices/ipin.sym} -680 -500 0 0 {name=p3 lab=PWRUP_1V8}
 C {JNW_GR02_SKY130A/JNW_VIS_ITIME.sym} 260 -480 0 0 {name=x1}
 C {JNW_GR02_SKY130A/JNW_VIS_TI.sym} -260 -490 0 0 {name=x2}
-C {devices/ipin.sym} 530 -520 2 0 {name=p5 lab=TRIGGER
+C {devices/ipin.sym} 990 -490 2 0 {name=p5 lab=TRIGGER
 }
 C {devices/ipin.sym} -820 -410 0 0 {name=p4 lab=CAP_RESET}
-C {devices/ipin.sym} 400 -370 2 0 {name=p6 lab=I_TEMP_OUT}
+C {devices/ipin.sym} 400 -330 2 0 {name=p6 lab=I_TEMP_OUT}
 C {devices/ipin.sym} -100 -460 2 0 {name=p7 lab=LPI}
 C {devices/ipin.sym} -100 -480 2 0 {name=p8 lab=LPO}
-C {devices/ipin.sym} 400 -330 2 0 {name=p9 lab=VREF_OUT}
-C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 470 -460 0 0 {name=x3}
-C {devices/lab_pin.sym} 470 -450 0 0 {name=p10 sig_type=std_logic lab=VSS}
-C {JNW_TR_SKY130A/JNWTR_RPPO2.sym} -810 -410 1 0 {name=x15[0:1]}
-C {devices/lab_pin.sym} -810 -300 0 0 {name=p11 sig_type=std_logic lab=VSS}
+C {devices/ipin.sym} 400 -370 2 0 {name=p9 lab=VREF_OUT}
+C {JNW_TR_SKY130A/JNWTR_DFTSPCX1_CV.sym} 530 -460 0 0 {name=x3 }
+C {devices/lab_pin.sym} 590 -550 0 0 {name=p10 sig_type=std_logic lab=VDD_1V8
+}
+C {devices/lab_pin.sym} 590 -430 0 0 {name=p11 sig_type=std_logic lab=VSS
+}
+C {JNW_TR_SKY130A/JNWTR_DFTSPCX1_CV.sym} 860 -460 0 0 {name=x4 }
+C {devices/lab_pin.sym} 920 -550 0 0 {name=p13 sig_type=std_logic lab=VDD_1V8
+}
+C {devices/lab_pin.sym} 920 -430 0 0 {name=p14 sig_type=std_logic lab=VSS
+}
+C {devices/lab_pin.sym} 860 -460 0 0 {name=p15 sig_type=std_logic lab=CLK}
+C {devices/ipin.sym} -730 -660 2 1 {name=p12 lab=CLK
+}
+C {devices/lab_pin.sym} 530 -460 0 0 {name=p16 sig_type=std_logic lab=CLK}
+C {devices/ipin.sym} 690 -520 1 0 {name=p17 lab=RESET_OUT
+}
