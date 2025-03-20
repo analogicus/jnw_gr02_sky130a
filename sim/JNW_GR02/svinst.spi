@@ -2,7 +2,8 @@
 adut [clk
 + trigger
 + ]
-+ [counter_out.7
++ [reset=0
++ counter_out.7
 + counter_out.6
 + counter_out.5
 + counter_out.4
@@ -18,14 +19,17 @@ Rsvi0 clk 0 1G
 Rsvi1 trigger 0 1G
 
 * Outputs
-Rsvi2 counter_out.7 0 1G
-Rsvi3 counter_out.6 0 1G
-Rsvi4 counter_out.5 0 1G
-Rsvi5 counter_out.4 0 1G
-Rsvi6 counter_out.3 0 1G
-Rsvi7 counter_out.2 0 1G
-Rsvi8 counter_out.1 0 1G
-Rsvi9 counter_out.0 0 1G
+Rsvi2 reset=0 0 1G
+Rsvi3 counter_out.7 0 1G
+Rsvi4 counter_out.6 0 1G
+Rsvi5 counter_out.5 0 1G
+Rsvi6 counter_out.4 0 1G
+Rsvi7 counter_out.3 0 1G
+Rsvi8 counter_out.2 0 1G
+Rsvi9 counter_out.1 0 1G
+Rsvi10 counter_out.0 0 1G
+
+.save v(reset=0)
 
 E_STATE_counter_out dec_counter_out 0 value={( 0 
 + + 128*v(counter_out.7)/AVDD

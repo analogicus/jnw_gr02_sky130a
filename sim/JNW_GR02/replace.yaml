@@ -1,3 +1,3 @@
 # all instances of {<variable>} will be replaced by the values.
-temp_sweep: -20 20 60 100 140 
-#temp_sweep: 27
+#temp_sweep: -20 20 60 100 140 
+temp_sweep: 27

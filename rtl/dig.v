@@ -6,7 +6,7 @@ module dig (
         //input wire n_rst,
         input wire trigger,
         //output logic pwm_out,
-        //output logic  reset,
+        output logic  reset=0,
         output logic [7:0] counter_out
         //output logic [7:0] counter
 
@@ -14,14 +14,14 @@ module dig (
 
         //logic   rst = 0;
 //        reg [7:0] counter;
-        logic [7:0] counter;
+        logic [7:0] counter;    
         logic  trigger_prev;
-        always_ff @(posedge clk) begin
+        logic [7:0] clock_divider =0;
+    always_ff @(posedge clk) begin
         
         if (trigger && !trigger_prev) begin
                 //update on positive edge
                 counter_out <= counter;
-                //counter <=0;
         end if (!trigger && trigger_prev) begin
                 //reset on negative edge
                 counter <= 0;
@@ -31,14 +31,19 @@ module dig (
         end
         trigger_prev <= trigger;
 
+        if (clock_divider < 250) begin
+                clock_divider <= clock_divider + 1 ;
+                reset <= 'b0;
+        end else begin
+                 //reset for 1 cycle
+                clock_divider <= 0;
+                 reset <= 'b1;
+        
         end
 
-        //always_ff @(posedge clk) begin
-        //        if (counter > counter_out) begin
-        //                pwm_out<=1;
-        //        end else begin 
-        //                pwm_out<=0;
-        //        end
-        //end
+    end
+       // create reset signal 
+  //      always_ff @(posedge clk) begin
+    //    end
 
 endmodule
