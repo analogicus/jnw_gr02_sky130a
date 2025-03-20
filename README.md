@@ -78,14 +78,15 @@ Group2
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_ITIME/Vcap_Vout.png?raw=true) 
 
 **svinst.spi - time to digital output**
-- Using verilog code to generate a clock divider and a register to find out and mark when Vcap is larger than Vref.
+- Using verilog code to generate a clock divider and a register to find out and mark when Vcap is larger than Vref (trigger goes high).
   - code is located in rtl/dig.v 
 - dividing the input clock to 1/256.
   - output resolution is 8 bit maximum, but probably much less. 
-- send RST signal to JNW_VIS_ITIME when clock counts to 256.
+- ~~send RST signal to JNW_VIS_ITIME when clock counts to 256~~.
+- detect when Vcap is smaller than Vref (trigger goes low), and reset the internal counter.
 - stores the clock value when Vcap is larger than Vref, and give this as output.
 > [!CAUTION]
-> current verilog implementation uses to much time to simulate in ngspice. It may not be feasible mixed simulation.
+> The design was changed so that the verilog code doesen't affect its inputs. It is probable that the act of changing its own inputs caused slowdown in simulation.
 
 
 The current implementation does not implement scaling. since the expected current range is approx. 2e-6A to 6e-6A ( see earlier figure), the range where Vcap is larger than Vref is from a couple of cycles up to a maximum. The description of how a long it will take to get a voltage change over a capacitor can be written as: 
