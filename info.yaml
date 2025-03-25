@@ -13,8 +13,10 @@ url: analogicus.github.io
 doc:
   # Make docs
   libraries:
-    JNW_EX_SKY130A:
+    JNW_GR02_SKY130A:
          - JNW_VIS_TI
+         - JNW_VIS_OTA
+         - JNW_VIS_ITIME
   #       - <cell>
 sim:
     JNW_VIS_TI: make typical && make summary

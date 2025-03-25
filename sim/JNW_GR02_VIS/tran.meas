@@ -1,0 +1,11 @@
+* Measure JNW_VIS_ITIME
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+*meas tran I_TEMP find I(VIT) at=80n
+
+echo "MEAS_END"
+.endc

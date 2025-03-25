@@ -44,9 +44,9 @@ Group2
 
 - Bellow are the plots and data of stability analysis  
 
-| f3db            |  gm_db | lf_gain | pm_deg | ug  |
-| :-              |  :-:   |  :-:    |  :-:   | :-: |
-| 1.8567e+05 | -14.285 |    39.044 |   69.669 | 1.6604e+07 |
+|      f3db |   gm_db |   lf_gain |   pm_deg |         ug |
+|-----------|---------|-----------|----------|------------|
+| 1.783e+05 | -13.882 |    39.138 |   66.437 | 1.5991e+07 |
 
 - **LOOP GAIN**  
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/lstb_schgtkttttvtnosweep_loop_gain.png?raw=true)  
@@ -63,9 +63,9 @@ Group2
 |**Name**|**Parameter**|**Description**| |**Min**|**Typ**|**Max**| Unit|
 |:---|:---|:---|---:|:---:|:---:|:---:| ---:|
 ||**offset** || **Spec**  | **-50.000** | **0.000** | **50.000** | **mV** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | -0.180 |  | |
-| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|-1.718 | -0.017 | 2.186 | |
-| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|-20.067 | 0.309 | 20.685 | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 0.772 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|-0.978 | 0.880 | 3.383 | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|-15.165 | 1.743 | 18.650 | |
 
 
 **JNW_VIS_ITIME - Current to time conversion module**  
