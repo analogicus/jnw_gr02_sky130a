@@ -99,7 +99,6 @@ Meaning it is expected that the output is somewhat inverse proportional to the c
 
 # How
 
-<explain short how you made this module>
 
 **JNW_VIS_TI - Temperature to current conversion module**  
 - Following the class and copying the design :)  
