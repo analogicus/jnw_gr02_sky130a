@@ -1,0 +1,2 @@
+source ../tech/magic/.magicrc
+addpath ../design/JNW_GR02_SKY130A

@@ -20,4 +20,4 @@ work/gds
 work/drc
 work/xsch
 *_obj_dir/
-
+rtl/runs/
