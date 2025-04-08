@@ -7,5 +7,28 @@ echo "MEAS_START"
 
 *meas tran I_TEMP find I(VIT) at=80n
 
+
+let var = 10
+#ifdef Nosweep
+foreach vtemp 27
+#else
+foreach vtemp {temp_sweep}
+#endif
+    echo "LINE_SHIFT"
+    echo "LINE_SHIFT"
+
+    set fend = .raw
+    load {cicname}_$vtemp$fend
+
+    let var = var + 1
+
+    set order = $&var
+
+
+    meas tran tdiff_{$order}_{$vtemp} TRIG v(VOUT) VAL=1.5 RISE=2 TARG v(VOUT) VAL=0.2 FALL=3
+    
+
+end
+
 echo "MEAS_END"
 .endc
