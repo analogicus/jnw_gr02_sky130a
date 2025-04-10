@@ -1,0 +1,88 @@
+*TB_SUN_TR_SKY130NM/TB_NCM
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+#ifdef Lay
+.include ../../../work/lpe/JNW_GR02_lpe.spi
+#else
+.include ../../../work/xsch/JNW_GR02_dig.spice
+#endif
+
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+.option TNOM=27 GMIN=1e-15 reltol=1e-3 method=gear
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param TRF = 10p
+.param AVDD = {vdda}
+.param PERIOD_CLK = 30n
+.param PW_CLK = PERIOD_CLK/2
+.param PERIOD_CAP_RESET = PERIOD_CLK*250
+.param PW_CAP_RESET = PERIOD_CAP_RESET/250
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS  VSS  0     dc 0
+VDD  VDD_1V8  VSS  dc 1.8
+VPUP PWRUP_1V8 VSS PULSE ( 0 1.8 1ns 0ps 0ps 1ns 1s 1)
+VCLK CLK VSS PULSE (0 1.8 11ps 2ns 2ns {PW_CLK} {PERIOD_CLK})
+*VCLK CLK VSS dc 1 
+
+*VNRST N_RST VSS PULSE ( 0 1.8 1ns 1ps 1ps 1ns 1s 1)
+*VRESET CAP_RESET RESET dc 0
+*VCAP_RESET CAP_RESET VSS PULSE (0 1.8 11ps 2ns 2ns {PW_CAP_RESET} {PERIOD_CAP_RESET})
+RSH LPO LPI 1u
+
+*C1 RESET VSS 1p IC=0V
+*C2 TRIGGER VSS 1p IC=0V
+
+
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+.include ../xdut.spi
+*----------------------------------------------------------------
+* PROBE
+*----------------------------------------------------------------
+.save all i(VSENS) v(VREF)
+
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+.control
+set num_threads=8
+set color0=white
+set color1=black
+unset askquit
+
+*.options itmax=700
+.options method=gear
+*.options trtol=1
+
+*optran 0 0 0 1n 1u 0
+
+
+
+set fend = .raw
+#ifdef Nosweep
+        option temp=27
+        tran 10u 10u 500p
+        write
+#else
+        foreach vtemp {temp_sweep}
+                option temp=$vtemp
+                tran 100n 5u 100p  
+                write {cicname}_$vtemp$fend
+        end
+#endif
+quit
+
+
+.endc
+
+.end

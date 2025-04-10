@@ -1,0 +1,34 @@
+#<name>:
+#  src:
+#    - <paramters>
+#  typ: <typical spec value>
+#  name: <long name>
+#  min: <minimum spec value>
+#  max: <maximum spec value>
+#  scale: <scale, multiply result by scale>
+#  digits: <significant digits>
+#  unit: Unit
+
+vref:
+  src:
+    - vref27
+  name: Referance Voltage
+  min: -25%
+  typ: 1.24
+  max: 25%
+  scale: 1
+  digits: 5
+  unit: V
+  optional: true
+
+isens:
+  src:
+    - i_temp27
+  name: Temperature current
+  min: -25%
+  typ: 3.8
+  max: 25%
+  scale: 1e6
+  digits: 5
+  unit: uA
+  optional: true

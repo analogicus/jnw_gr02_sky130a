@@ -1,2 +1,3 @@
 source ../tech/magic/.magicrc
 addpath ../design/JNW_GR02_SKY130A
+macro Meta_XK_1 "see no *; see viali; see locali; see m1; see via1; see m2 ; see m3 "
