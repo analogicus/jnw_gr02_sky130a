@@ -25,7 +25,7 @@ foreach vtemp {temp_sweep}
     set order = $&var
 
 
-    meas tran tdiff_{$order}_{$vtemp} TRIG v(VOUT) VAL=1.5 RISE=2 TARG v(VOUT) VAL=0.2 FALL=3
+*    meas tran tdiff_{$order}_{$vtemp} TRIG v(VOUT) VAL=1.5 RISE=2 TARG v(VOUT) VAL=0.2 FALL=3
     
 
 end

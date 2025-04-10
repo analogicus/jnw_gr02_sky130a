@@ -55,12 +55,12 @@ optran 0 0 0 1n 1u 0
 set fend = .raw
 #ifdef Nosweep
     option temp=27
-    tran 200n 20u 10n 
+    tran 100n 5u 10n 
     write
 #else
     foreach vtemp {temp_sweep}
         option temp=$vtemp
-        tran 200n 20u 10n 
+        tran 100n 5u 10n 
         write {cicname}_$vtemp$fend
     end
 #endif
