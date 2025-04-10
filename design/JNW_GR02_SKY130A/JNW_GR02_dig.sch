@@ -17,10 +17,10 @@ N -430 -480 -410 -480 {lab=VSS}
 N -430 -340 70 -340 {lab=VSS}
 N 70 -440 70 -340 {lab=VSS}
 N 70 -440 110 -440 {lab=VSS}
-N 410 -520 530 -520 {lab=#net1}
-N 50 -460 110 -460 {lab=#net2}
+N 410 -520 530 -520 {lab=trigg_1}
+N 50 -460 110 -460 {lab=trigg_3}
 N -550 -500 -410 -500 {lab=PWRUP_1V8}
-N 50 -460 50 -410 {lab=#net2}
+N 50 -460 50 -410 {lab=trigg_3}
 N -110 -520 30 -520 {lab=I_TEMP_OUT}
 N -110 -480 -100 -480 {lab=LPO}
 N -110 -460 -100 -460 {lab=LPI}
@@ -35,14 +35,14 @@ N -650 -500 -550 -500 {lab=PWRUP_1V8}
 N -10 -500 110 -500 {lab=VREF_OUT}
 N 30 -520 30 -330 {lab=I_TEMP_OUT}
 N 30 -480 110 -480 {lab=I_TEMP_OUT}
-N 50 -390 670 -390 {lab=#net2}
-N 50 -410 50 -390 {lab=#net2}
-N 630 -520 860 -520 {lab=#net3}
-N 960 -520 990 -520 {lab=#net2}
-N 990 -520 990 -390 {lab=#net2}
-N 670 -390 990 -390 {lab=#net2}
+N 50 -390 670 -390 {lab=trigg_3}
+N 50 -410 50 -390 {lab=trigg_3}
+N 630 -520 860 -520 {lab=trigg_2}
+N 960 -520 990 -520 {lab=trigg_3}
+N 990 -520 990 -390 {lab=trigg_3}
+N 670 -390 990 -390 {lab=trigg_3}
 N 990 -460 1250 -460 {
-lab=#net2}
+lab=trigg_3}
 C {devices/ipin.sym} -520 -590 0 0 {name=p1 lab=VDD_1V8}
 C {devices/ipin.sym} -720 -340 0 0 {name=p2 lab=VSS}
 C {devices/ipin.sym} -680 -500 0 0 {name=p3 lab=PWRUP_1V8}
@@ -86,3 +86,7 @@ value="
 .include /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_GR02_SKY130A/dig.spice
 
 "}
+C {devices/ipin.sym} 460 -520 1 0 {name=p25 lab=trigg_1}
+C {devices/ipin.sym} 700 -520 1 0 {name=p26 lab=trigg_2}
+C {devices/ipin.sym} 990 -520 1 0 {name=p27 lab=trigg_3}
+C {devices/ipin.sym} -740 -270 0 0 {name=p28 lab=clk}

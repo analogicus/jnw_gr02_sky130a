@@ -38,7 +38,7 @@ library (dig) {
   }
 
   cell ("dig") {
-    area : 1188.641 
+    area : 1203.655 
     is_macro_cell : true;
     pin("clk") {
       direction : input;
