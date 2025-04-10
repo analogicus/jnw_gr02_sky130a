@@ -52,10 +52,19 @@ unset askquit
 
 optran 0 0 0 1n 1u 0
 
-*selecting a later start time, I don't care what happens at the beginning right now
-option temp=30
-tran 200n 10u 10n 
-write
+set fend = .raw
+#ifdef Nosweep
+    option temp=27
+    tran 100n 5u 10n 
+    write
+#else
+    foreach vtemp {temp_sweep}
+        option temp=$vtemp
+        tran 500n 10u 10n 
+        write {cicname}_$vtemp$fend
+    end
+#endif
+
 quit
 
 

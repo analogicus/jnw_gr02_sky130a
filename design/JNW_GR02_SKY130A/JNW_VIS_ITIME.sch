@@ -21,24 +21,24 @@ N 40 330 340 330 {lab=VSS}
 N -240 -160 -0 -160 {lab=VDD}
 N 40 60 40 80 {lab=I_TEMP}
 N 80 250 100 250 {lab=RST}
-N 485 10 530 10 {lab=VOUT}
 N 340 220 340 330 {lab=VSS}
 N 40 110 40 220 {lab=I_TEMP}
 N -130 180 -130 220 {lab=I_TEMP}
 N -130 60 -130 100 {lab=I_TEMP}
 N -130 100 -130 180 {lab=I_TEMP}
-N 40 60 230 60 {
-lab=I_TEMP}
-N 110 -30 230 -40 {
-lab=VREF}
+N 170 60 230 60 {lab=VREF}
+N 40 -40 40 60 {lab=I_TEMP}
+N 40 -40 80 -40 {lab=I_TEMP}
+N 160 -40 230 -40 {lab=I_TEMP}
+N 80 -40 160 -40 {lab=I_TEMP}
+N 490 10 540 10 {lab=VOUT}
 C {devices/ipin.sym} -240 -160 0 0 {name=p1 lab=VDD}
 C {devices/ipin.sym} -230 330 0 0 {name=p2 lab=VSS
 }
 C {devices/ipin.sym} 110 -30 0 0 {name=p3 lab=VREF}
 C {devices/ipin.sym} -240 60 0 0 {name=p4 lab=I_TEMP}
 C {JNW_GR02_SKY130A/JNW_VIS_OTA.sym} 290 150 0 0 {name=x7}
-C {JNW_ATR_SKY130A/JNWATR_NCH_2C1F2.sym} 80 250 0 1 {name=x4 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_12C1F2.sym} 80 250 0 1 {name=x4[0:3]}
+C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} 80 250 0 1 {name=x4}
 C {devices/ipin.sym} 100 250 0 1 {name=p5 lab=RST}
-C {devices/opin.sym} 530 10 0 0 {name=p6 lab=VOUT}
+C {devices/opin.sym} 540 10 0 0 {name=p6 lab=VOUT}
 C {JNW_TR_SKY130A/JNWTR_CAPX4.sym} -130 280 0 0 {name=x1[0:19]}
