@@ -3,10 +3,12 @@ import pandas as pd
 import yaml
 import matplotlib.pyplot as plt
 import re
+import numpy as np
 
 def main(name):
   # Delete next line if you want to use python post processing
   yamlfile = name + ".yaml"
+
 
   if "Nosweep" in yamlfile:
     return
@@ -27,12 +29,15 @@ def main(name):
   tdiff = []
 
   print(tdiff_data)
+  freq = np.divide(1, tdiff_data)
 
 
   plt.figure(figsize=(10, 6))
-  plt.plot(Temp, tdiff_data, 'bo-', linewidth=2, markersize=8)
+  plt.plot(Temp, freq, 'bo-', linewidth=2, markersize=8)
   plt.xlabel('Temperature (°C)', fontsize=12)
-  plt.ylabel('Time Difference (s)', fontsize=12)
-  plt.title('Time Difference vs Temperature', fontsize=14)
+  plt.ylabel('Frequency', fontsize=12)
+  plt.title('Output frequency vs Temperature', fontsize=14)
   plt.grid(True, linestyle='--', alpha=0.7)
+  plt.savefig("SensorFunction.png")
   plt.show()
+

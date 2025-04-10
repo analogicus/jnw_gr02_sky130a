@@ -60,7 +60,7 @@ set fend = .raw
 #else
     foreach vtemp {temp_sweep}
         option temp=$vtemp
-        tran 100n 5u 10n 
+        tran 500n 10u 10n 
         write {cicname}_$vtemp$fend
     end
 #endif
