@@ -39,20 +39,21 @@ Group2
 |**Name**|**Parameter**|**Description**| |**Min**|**Typ**|**Max**| Unit|
 |:---|:---|:---|---:|:---:|:---:|:---:| ---:|
 |**Referance Voltage**|**vref27** || **Spec**  | **0.90000** | **1.20000** | **1.50000** | **V** |
-| | | | [Sch_typ](results/tran_Sch_typical.html) | | 1.20066 |  | |
-| | | | [Sch_etc](results/tran_Sch_etc.html) | 1.19779 | 1.20082 | 1.20342 | |
-| | | | [Sch_3std](results/tran_Sch_mc.html) | 1.07695 | 1.20448 | 1.33201 | |
-| **Temperature current** | **i_temp27** || **Spec** | **3.00000** | **4.00000** | **5.00000** | **uA** |
-| | | | [Sch_typ](results/tran_Sch_typical.html) | | 3.98492 |  | |
-| | | | [Sch_etc](results/tran_Sch_etc.html) | 3.42394 | 3.97680 | 4.64859 | |
-| | | | [Sch_3std](results/tran_Sch_mc.html) | 3.07677 | 4.00629 | 4.93581 | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.20066 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|1.19779 | 1.20082 | 1.20342 | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|1.07695 | 1.20448 | 1.33201 | |
+|**Temperature current**|**i\_temp27** || **Spec**  | **3.00000** | **4.00000** | **5.00000** | **uA** |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 3.98492 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|3.42394 | 3.97680 | 4.64859 | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|3.07677 | 4.00629 | 4.93581 | |
 
 
 - Bellow are the plots and data of stability analysis  
 
-|      f3db |   gm_db |   lf_gain |   pm_deg |         ug |
-|-----------|---------|-----------|----------|------------|
-| 1.783e+05 | -13.882 |    39.138 |   66.437 | 1.5991e+07 |
+|       f3db |   gm_db |   lf_gain |   pm_deg |         ug |
+|------------|---------|-----------|----------|------------|
+| 2.1902e+05 | -13.295 |    39.099 |    64.77 | 1.9513e+07 |
+
 
 - **LOOP GAIN**  
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/lstb_schgtkttttvtnosweep_loop_gain.png?raw=true)  
