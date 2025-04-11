@@ -1,13 +1,13 @@
 library: JNW_GR02_SKY130A
-cell: JNW_GR02
+cell: JNW_GR02_VIS
 # Your name
-author: Anonymous
+author: Group2
 # Your github username
-github: analogicus
+github: visomen
 # Something funny and descriptive
 tagline: The answer is 42
 # Your email, if you so wish
-email: anon@anon.com
+email: domen2.visnar@gmail.com
 # Your github site, usually <github username>.github.io
 url: https://analogicus.github.io/jnw_gr02_sky130a/
 doc:
