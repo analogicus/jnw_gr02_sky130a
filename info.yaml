@@ -9,7 +9,7 @@ tagline: The answer is 42
 # Your email, if you so wish
 email: anon@anon.com
 # Your github site, usually <github username>.github.io
-url: analogicus.github.io
+url: https://analogicus.github.io/jnw_gr02_sky130a/
 doc:
   # Make docs
   libraries:
