@@ -32,6 +32,8 @@ N 40 -40 80 -40 {lab=I_TEMP}
 N 160 -40 230 -40 {lab=I_TEMP}
 N 80 -40 160 -40 {lab=I_TEMP}
 N 490 10 540 10 {lab=VOUT}
+N 485 10 490 10 {
+lab=VOUT}
 C {devices/ipin.sym} -240 -160 0 0 {name=p1 lab=VDD}
 C {devices/ipin.sym} -230 330 0 0 {name=p2 lab=VSS
 }
