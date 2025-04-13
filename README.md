@@ -19,9 +19,9 @@ Group2
 - This is an analog solution to the temperature sensor
 - Here an Inverter based VCO is used with current starvation. Current mirrors copy the current from the JNW_VIS_TI module that is dependant on temperature, therefore less current we have the slower the inverters work and therefore there is a reduction of frequency.
 
-![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_GR02_VIS/SensorFunction.png?raw=true) 
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_GR02_VIS/SensorFunction.png?raw=true)  
 
-![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/work/AIC_MainLayout.png?raw=true)  
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/Figures/AIC_MainLayout.png?raw=true)  
 
 **JNW_VIS_TI - Temperature to current conversion module**  
 - First step in making the temperature sensor for AIC2025 course.  
