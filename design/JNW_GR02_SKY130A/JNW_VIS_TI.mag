@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1744548984
+timestamp 1744581443
 << locali >>
 rect 524 -2410 9684 -2404
 rect 524 -2590 1678 -2410
@@ -419,103 +419,103 @@ timestamp 1744535236
 transform 1 0 6264 0 1 -9972
 box -184 -128 1848 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_0 ../JNW_ATR_SKY130A
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 6784 0 1 -3472
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_1
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 6784 0 1 -4272
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_2
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 6784 0 1 -5072
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_6
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 3184 0 1 -3472
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_7
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 3184 0 1 -4272
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_8
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 3184 0 1 -5072
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_9
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 4984 0 1 -5072
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_10
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 4984 0 1 -4272
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_11
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 4984 0 1 -3472
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_16
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 8564 0 1 -8072
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_17
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 8564 0 1 -7272
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_18
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 3184 0 1 -6472
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_21
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 6784 0 1 -6472
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_22
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 6784 0 1 -8072
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_23
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 6784 0 1 -7272
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_24
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 4984 0 1 -6472
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_25
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 3184 0 1 -8072
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_26
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 3184 0 1 -7272
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_27
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 8564 0 1 -6472
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_28
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 4984 0 1 -8072
 box -184 -128 1336 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_29
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 4984 0 1 -7272
 box -184 -128 1336 928
 use JNWTR_CAPX4  JNWTR_CAPX4_0 ../JNW_TR_SKY130A
-timestamp 1744451459
+timestamp 1744372914
 transform -1 0 6030 0 -1 -16390
 box 480 0 3120 2640
 use JNWTR_CAPX4  JNWTR_CAPX4_1
-timestamp 1744451459
+timestamp 1744372914
 transform 1 0 -430 0 1 -16160
 box 480 0 3120 2640
 use JNWTR_CAPX4  JNWTR_CAPX4_2
-timestamp 1744451459
+timestamp 1744372914
 transform -1 0 3160 0 -1 -16390
 box 480 0 3120 2640
 use JNWTR_CAPX4  JNWTR_CAPX4_3
-timestamp 1744451459
+timestamp 1744372914
 transform 1 0 2440 0 1 -16160
 box 480 0 3120 2640
 use JNWTR_RPPO2  JNWTR_RPPO2_0 ../JNW_TR_SKY130A
@@ -535,43 +535,43 @@ timestamp 1744535236
 transform -1 0 -1752 0 1 -12600
 box 0 0 1448 3440
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_0 $PDKPATH/libs.ref/sky130_fd_pr/mag
-timestamp 1738263620
+timestamp 1734020192
 transform 1 0 980 0 1 -11400
 box 0 0 1340 1340
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_1
-timestamp 1738263620
+timestamp 1734020192
 transform 1 0 2380 0 1 -11400
 box 0 0 1340 1340
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_2
-timestamp 1738263620
+timestamp 1734020192
 transform 1 0 3780 0 1 -11400
 box 0 0 1340 1340
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_3
-timestamp 1738263620
+timestamp 1734020192
 transform 1 0 3780 0 1 -10000
 box 0 0 1340 1340
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_5
-timestamp 1738263620
+timestamp 1734020192
 transform 1 0 980 0 1 -10000
 box 0 0 1340 1340
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_6
-timestamp 1738263620
+timestamp 1734020192
 transform 1 0 3780 0 1 -12800
 box 0 0 1340 1340
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_7
-timestamp 1738263620
+timestamp 1734020192
 transform 1 0 980 0 1 -12800
 box 0 0 1340 1340
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_8
-timestamp 1738263620
+timestamp 1734020192
 transform 1 0 2380 0 1 -12800
 box 0 0 1340 1340
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9
-timestamp 1738263620
+timestamp 1734020192
 transform 1 0 2380 0 1 -10000
 box 0 0 1340 1340
 use JNWATR_PCH_2C5F0  x2 ../JNW_ATR_SKY130A
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 8564 0 1 -5072
 box -184 -128 1208 928
 use JNWTR_RPPO2  x3
@@ -579,15 +579,15 @@ timestamp 1744535236
 transform -1 0 2648 0 1 -8200
 box 0 0 1448 3440
 use JNW_VIS_OTA  x7 ../JNW_GR02_SKY130A
-timestamp 1744548984
+timestamp 1744581417
 transform 1 0 1120 0 1 -16000
 box -9120 -3400 4936 2656
 use JNWTR_RPPO4  x14 ../JNW_TR_SKY130A
-timestamp 1744464884
+timestamp 1744372914
 transform -1 0 -7120 0 1 -12600
 box 0 0 1880 3440
 use JNWATR_PCH_2C5F0  x15
-timestamp 1740610800
+timestamp 1734044400
 transform 1 0 1384 0 1 -4472
 box -184 -128 1208 928
 << labels >>
