@@ -6,13 +6,13 @@ MACRO dig
   CLASS BLOCK ;
   FOREIGN dig ;
   ORIGIN 0.000 0.000 ;
-  SIZE 46.975 BY 57.695 ;
+  SIZE 33.000 BY 120.000 ;
   PIN VGND
     DIRECTION INOUT ;
     USE GROUND ;
     PORT
       LAYER met4 ;
-        RECT 24.340 10.640 25.940 46.480 ;
+        RECT 24.340 10.640 25.940 109.040 ;
     END
   END VGND
   PIN VPWR
@@ -20,7 +20,7 @@ MACRO dig
     USE POWER ;
     PORT
       LAYER met4 ;
-        RECT 21.040 10.640 22.640 46.480 ;
+        RECT 21.040 10.640 22.640 109.040 ;
     END
   END VPWR
   PIN clk
@@ -29,7 +29,7 @@ MACRO dig
     ANTENNAGATEAREA 0.852000 ;
     PORT
       LAYER met3 ;
-        RECT 0.000 13.640 4.000 14.240 ;
+        RECT 0.000 28.600 0.300 29.200 ;
     END
   END clk
   PIN counter_out[0]
@@ -38,7 +38,7 @@ MACRO dig
     ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met3 ;
-        RECT 42.975 4.120 46.975 4.720 ;
+        RECT 32.700 6.840 33.000 7.440 ;
     END
   END counter_out[0]
   PIN counter_out[1]
@@ -47,7 +47,7 @@ MACRO dig
     ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met3 ;
-        RECT 42.975 10.920 46.975 11.520 ;
+        RECT 32.700 21.800 33.000 22.400 ;
     END
   END counter_out[1]
   PIN counter_out[2]
@@ -56,7 +56,7 @@ MACRO dig
     ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met3 ;
-        RECT 42.975 17.720 46.975 18.320 ;
+        RECT 32.700 36.760 33.000 37.360 ;
     END
   END counter_out[2]
   PIN counter_out[3]
@@ -65,7 +65,7 @@ MACRO dig
     ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met3 ;
-        RECT 42.975 24.520 46.975 25.120 ;
+        RECT 32.700 51.720 33.000 52.320 ;
     END
   END counter_out[3]
   PIN counter_out[4]
@@ -74,7 +74,7 @@ MACRO dig
     ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met3 ;
-        RECT 42.975 31.320 46.975 31.920 ;
+        RECT 32.700 66.680 33.000 67.280 ;
     END
   END counter_out[4]
   PIN counter_out[5]
@@ -83,7 +83,7 @@ MACRO dig
     ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met3 ;
-        RECT 42.975 38.120 46.975 38.720 ;
+        RECT 32.700 81.640 33.000 82.240 ;
     END
   END counter_out[5]
   PIN counter_out[6]
@@ -92,7 +92,7 @@ MACRO dig
     ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met3 ;
-        RECT 42.975 44.920 46.975 45.520 ;
+        RECT 32.700 96.600 33.000 97.200 ;
     END
   END counter_out[6]
   PIN counter_out[7]
@@ -101,7 +101,7 @@ MACRO dig
     ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met3 ;
-        RECT 42.975 51.720 46.975 52.320 ;
+        RECT 32.700 111.560 33.000 112.160 ;
     END
   END counter_out[7]
   PIN trigger
@@ -110,38 +110,38 @@ MACRO dig
     ANTENNAGATEAREA 0.196500 ;
     PORT
       LAYER met3 ;
-        RECT 0.000 42.200 4.000 42.800 ;
+        RECT 0.000 88.440 0.300 89.040 ;
     END
   END trigger
   OBS
       LAYER nwell ;
-        RECT 5.330 10.795 41.590 46.430 ;
+        RECT 5.330 10.795 27.330 108.885 ;
       LAYER li1 ;
-        RECT 5.520 10.795 41.400 46.325 ;
+        RECT 5.520 10.795 27.140 108.885 ;
       LAYER met1 ;
-        RECT 4.210 10.240 41.400 46.880 ;
+        RECT 3.290 10.640 32.130 109.040 ;
       LAYER met2 ;
-        RECT 4.230 4.235 39.930 52.205 ;
+        RECT 3.310 6.955 32.110 112.045 ;
       LAYER met3 ;
-        RECT 3.990 51.320 42.575 52.185 ;
-        RECT 3.990 45.920 42.975 51.320 ;
-        RECT 3.990 44.520 42.575 45.920 ;
-        RECT 3.990 43.200 42.975 44.520 ;
-        RECT 4.400 41.800 42.975 43.200 ;
-        RECT 3.990 39.120 42.975 41.800 ;
-        RECT 3.990 37.720 42.575 39.120 ;
-        RECT 3.990 32.320 42.975 37.720 ;
-        RECT 3.990 30.920 42.575 32.320 ;
-        RECT 3.990 25.520 42.975 30.920 ;
-        RECT 3.990 24.120 42.575 25.520 ;
-        RECT 3.990 18.720 42.975 24.120 ;
-        RECT 3.990 17.320 42.575 18.720 ;
-        RECT 3.990 14.640 42.975 17.320 ;
-        RECT 4.400 13.240 42.975 14.640 ;
-        RECT 3.990 11.920 42.975 13.240 ;
-        RECT 3.990 10.520 42.575 11.920 ;
-        RECT 3.990 5.120 42.975 10.520 ;
-        RECT 3.990 4.255 42.575 5.120 ;
+        RECT 0.300 111.160 32.300 112.025 ;
+        RECT 0.300 97.600 32.700 111.160 ;
+        RECT 0.300 96.200 32.300 97.600 ;
+        RECT 0.300 89.440 32.700 96.200 ;
+        RECT 0.700 88.040 32.700 89.440 ;
+        RECT 0.300 82.640 32.700 88.040 ;
+        RECT 0.300 81.240 32.300 82.640 ;
+        RECT 0.300 67.680 32.700 81.240 ;
+        RECT 0.300 66.280 32.300 67.680 ;
+        RECT 0.300 52.720 32.700 66.280 ;
+        RECT 0.300 51.320 32.300 52.720 ;
+        RECT 0.300 37.760 32.700 51.320 ;
+        RECT 0.300 36.360 32.300 37.760 ;
+        RECT 0.300 29.600 32.700 36.360 ;
+        RECT 0.700 28.200 32.700 29.600 ;
+        RECT 0.300 22.800 32.700 28.200 ;
+        RECT 0.300 21.400 32.300 22.800 ;
+        RECT 0.300 7.840 32.700 21.400 ;
+        RECT 0.300 6.975 32.300 7.840 ;
   END
 END dig
 END LIBRARY

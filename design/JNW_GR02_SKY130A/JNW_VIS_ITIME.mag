@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1744492670
+timestamp 1744542523
 << locali >>
 rect -896 -2496 -704 -2304
 rect 1024 -7424 1216 -7232
@@ -174,7 +174,7 @@ timestamp 1740610800
 transform 1 0 1760 0 -1 -8160
 box -184 -128 1208 928
 use JNW_VIS_OTA  x7 ../JNW_GR02_SKY130A
-timestamp 1744492486
+timestamp 1744542523
 transform 1 0 4767 0 1 -4648
 box -9120 -3400 4936 2656
 << labels >>

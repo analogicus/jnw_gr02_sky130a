@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #set -e #exit on first error
-#openlane --manual-pdk --overwrite --run-tag latest --pdk sky130A ./config.json &&
+openlane --manual-pdk --overwrite --run-tag latest --pdk sky130A ./config.json &&
 cp -r ./runs/latest/final/* ./syntesized_design/ 
 echo 1
 last_line=$(grep -n '.subckt' ./syntesized_design/spice/dig.spice | tail -n1 | cut -d: -f1) 
