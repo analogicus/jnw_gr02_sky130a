@@ -27,8 +27,8 @@ VSS  VSS  0     dc 0
 VDD  VDD VSS dc 1.8
 VPUP PWR_UP VSS PULSE ( 0 1.8 10NS 1PS 1PS 10NS 1S 1)
 
-VIT ITEMP_O ITEMP_I dc 0
-R1 LPO LPI 1u
+*VIT ITEMP_O ITEMP_I dc 0
+*R1 LPO LPI 1u
 
 *-----------------------------------------------------------------
 * DUT

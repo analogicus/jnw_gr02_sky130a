@@ -1,2 +1,2 @@
 *Automatic generated instance fron ../../tech/scripts/genxdut JNW_GR02_VIS
-XDUT VDD VSS PWR_UP LPI LPO ITEMP_O ITEMP_I VOUT  JNW_GR02_VIS
+XDUT VDD VSS PWR_UP VOUT VREF  JNW_GR02_VIS
