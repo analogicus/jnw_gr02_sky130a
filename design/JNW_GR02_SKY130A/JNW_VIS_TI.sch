@@ -1,4 +1,5 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.5 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -108,10 +109,8 @@ N -170 -200 -170 -190 {lab=VREF}
 N -230 190 -190 190 {lab=VSS}
 N -230 190 -230 280 {lab=VSS}
 N -230 -150 -230 190 {lab=VSS}
-N -230 -150 -190 -150 {lab=VSS}
 N -1100 -280 -1100 -260 {lab=VSS}
 N -1100 -370 -1100 -360 {lab=V_MEAS3}
-N -1160 -320 -1120 -320 {lab=VSS}
 N -1100 -140 -1100 -100 {lab=VSS}
 N -1100 -400 -1100 -370 {lab=V_MEAS3}
 N -890 -480 -890 -340 {lab=V_MEAS1}
@@ -155,6 +154,10 @@ N -170 -640 -140 -640 {lab=V_MEAS4}
 N -520 -640 -490 -640 {lab=V_MEAS5}
 N -860 -640 -860 -600 {lab=V_MEAS2}
 N -890 -640 -860 -640 {lab=V_MEAS2}
+N -1160 -320 -1120 -320 {
+lab=VSS}
+N -230 -150 -190 -150 {
+lab=VSS}
 C {devices/ipin.sym} -1200 330 0 0 {name=p2 lab=VSS
 }
 C {sky130_fd_pr/pnp_05v5.sym} -540 280 0 0 {name=Q1
