@@ -1,10 +1,6 @@
 magic
 tech sky130A
-<<<<<<< HEAD
-timestamp 1744542523
-=======
 timestamp 1744548984
->>>>>>> d178464 (Tried to fix the layout, it phantomly connects to GND... don't know where, blame the inverters that have a mismatch as well)
 << locali >>
 rect -4458 1175 2272 1178
 rect -4458 1085 -4261 1175
@@ -250,11 +246,7 @@ timestamp 1744535236
 transform 1 0 1392 0 1 264
 box -92 -64 924 464
 use JNWTR_RPPO2  JNWTR_RPPO2_0 JNW_TR_SKY130A
-<<<<<<< HEAD
-timestamp 1744284492
-=======
 timestamp 1744535236
->>>>>>> d178464 (Tried to fix the layout, it phantomly connects to GND... don't know where, blame the inverters that have a mismatch as well)
 transform -1 0 -3076 0 1 -1700
 box 0 0 724 1720
 use JNWTR_RPPO2  JNWTR_RPPO2_1
@@ -274,11 +266,7 @@ timestamp 1744535236
 transform 1 0 -4408 0 1 664
 box -92 -64 924 464
 use JNWATR_NCH_12C5F0  xc01 JNW_ATR_SKY130A
-<<<<<<< HEAD
-timestamp 1740610800
-=======
 timestamp 1744535236
->>>>>>> d178464 (Tried to fix the layout, it phantomly connects to GND... don't know where, blame the inverters that have a mismatch as well)
 transform 1 0 -1008 0 1 -1136
 box -92 -64 924 464
 use JNWATR_NCH_12C5F0  xc02

@@ -1,11 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-<<<<<<< HEAD
-timestamp 1744543763
-=======
 timestamp 1744548984
->>>>>>> d178464 (Tried to fix the layout, it phantomly connects to GND... don't know where, blame the inverters that have a mismatch as well)
 << locali >>
 rect 524 -2410 9684 -2404
 rect 524 -2590 1678 -2410
@@ -415,19 +411,11 @@ rect 6150 -18169 6151 -18071
 rect 6249 -18169 6250 -18071
 rect 6150 -18170 6250 -18169
 use JNWATR_NCH_12C5F0  JNWATR_NCH_12C5F0_0 ../JNW_ATR_SKY130A
-<<<<<<< HEAD
-timestamp 1740610800
-transform 1 0 6264 0 1 -9172
-box -184 -128 1848 928
-use JNWATR_NCH_12C5F0  JNWATR_NCH_12C5F0_1
-timestamp 1740610800
-=======
 timestamp 1744535236
 transform 1 0 6264 0 1 -9172
 box -184 -128 1848 928
 use JNWATR_NCH_12C5F0  JNWATR_NCH_12C5F0_1
 timestamp 1744535236
->>>>>>> d178464 (Tried to fix the layout, it phantomly connects to GND... don't know where, blame the inverters that have a mismatch as well)
 transform 1 0 6264 0 1 -9972
 box -184 -128 1848 928
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_0 ../JNW_ATR_SKY130A
@@ -531,21 +519,6 @@ timestamp 1744451459
 transform 1 0 2440 0 1 -16160
 box 480 0 3120 2640
 use JNWTR_RPPO2  JNWTR_RPPO2_0 ../JNW_TR_SKY130A
-<<<<<<< HEAD
-timestamp 1744284492
-transform -1 0 48 0 1 -12600
-box 0 0 1448 3440
-use JNWTR_RPPO2  JNWTR_RPPO2_1
-timestamp 1744284492
-transform -1 0 -5352 0 1 -12600
-box 0 0 1448 3440
-use JNWTR_RPPO2  JNWTR_RPPO2_2
-timestamp 1744284492
-transform -1 0 -3552 0 1 -12600
-box 0 0 1448 3440
-use JNWTR_RPPO2  JNWTR_RPPO2_3
-timestamp 1744284492
-=======
 timestamp 1744535236
 transform -1 0 48 0 1 -12600
 box 0 0 1448 3440
@@ -559,7 +532,6 @@ transform -1 0 -3552 0 1 -12600
 box 0 0 1448 3440
 use JNWTR_RPPO2  JNWTR_RPPO2_3
 timestamp 1744535236
->>>>>>> d178464 (Tried to fix the layout, it phantomly connects to GND... don't know where, blame the inverters that have a mismatch as well)
 transform -1 0 -1752 0 1 -12600
 box 0 0 1448 3440
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_0 $PDKPATH/libs.ref/sky130_fd_pr/mag
@@ -603,19 +575,11 @@ timestamp 1740610800
 transform 1 0 8564 0 1 -5072
 box -184 -128 1208 928
 use JNWTR_RPPO2  x3
-<<<<<<< HEAD
-timestamp 1744284492
-transform -1 0 2648 0 1 -8200
-box 0 0 1448 3440
-use JNW_VIS_OTA  x7 ../JNW_GR02_SKY130A
-timestamp 1744542523
-=======
 timestamp 1744535236
 transform -1 0 2648 0 1 -8200
 box 0 0 1448 3440
 use JNW_VIS_OTA  x7 ../JNW_GR02_SKY130A
 timestamp 1744548984
->>>>>>> d178464 (Tried to fix the layout, it phantomly connects to GND... don't know where, blame the inverters that have a mismatch as well)
 transform 1 0 1120 0 1 -16000
 box -9120 -3400 4936 2656
 use JNWTR_RPPO4  x14 ../JNW_TR_SKY130A
