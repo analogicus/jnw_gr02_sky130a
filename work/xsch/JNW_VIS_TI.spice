@@ -1,4 +1,4 @@
-** sch_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_GR02_SKY130A/JNW_VIS_TI.sch
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_GR02_SKY130A/JNW_VIS_TI.sch
 .subckt JNW_VIS_TI I_TEMP VDD VREF LPO LPI PWR_UP VSS
 *.ipin VSS
 *.opin VREF
@@ -48,8 +48,8 @@ x16<2> I_TEMP V_MEAS3 V_MEAS6 V_MEAS6 JNWATR_PCH_4C5F0
 .ends
 
 * expanding   symbol:  JNW_GR02_SKY130A/JNW_VIS_OTA.sym # of pins=5
-** sym_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_GR02_SKY130A/JNW_VIS_OTA.sym
-** sch_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_GR02_SKY130A/JNW_VIS_OTA.sch
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_GR02_SKY130A/JNW_VIS_OTA.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_GR02_SKY130A/JNW_VIS_OTA.sch
 .subckt JNW_VIS_OTA VDD VIN VIP VSS VOUT
 *.ipin VDD
 *.ipin VIP
@@ -85,8 +85,8 @@ xa02 VOP net2 VDD VDD JNWATR_PCH_12C5F0
 
 
 * expanding   symbol:  JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sym # of pins=4
-** sym_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sym
-** sch_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sch
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sch
 .subckt JNWATR_NCH_12C5F0 D G S B
 *.iopin D
 *.iopin G
@@ -98,8 +98,8 @@ XM1 D G S B sky130_fd_pr__nfet_01v8 L=0.94 W=8.32 nf=2 ad='int((nf+1)/2) * W/nf 
 
 
 * expanding   symbol:  JNW_TR_SKY130A/JNWTR_CAPX4.sym # of pins=2
-** sym_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_CAPX4.sym
-** sch_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_CAPX4.sch
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_CAPX4.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_CAPX4.sch
 .subckt JNWTR_CAPX4 A B
 *.iopin A
 *.iopin B
@@ -111,8 +111,8 @@ XXB2 A B JNWTR_CAPX1
 
 
 * expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym # of pins=4
-** sym_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym
-** sch_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sch
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sch
 .subckt JNWATR_PCH_4C5F0 D G S B
 *.iopin D
 *.iopin G
@@ -124,8 +124,8 @@ XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.94 W=3.2 nf=2 ad='int((nf+1)/2) * W/nf *
 
 
 * expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sym # of pins=4
-** sym_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sym
-** sch_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sch
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sch
 .subckt JNWATR_PCH_2C5F0 D G S B
 *.iopin D
 *.iopin G
@@ -137,8 +137,8 @@ XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.94 W=1.92 nf=2 ad='int((nf+1)/2) * W/nf 
 
 
 * expanding   symbol:  JNW_TR_SKY130A/JNWTR_RPPO4.sym # of pins=3
-** sym_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO4.sym
-** sch_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO4.sch
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO4.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO4.sch
 .subckt JNWTR_RPPO4 N P B
 *.iopin P
 *.iopin N
@@ -148,8 +148,8 @@ XXA1 N P B JNWTR_RES4
 
 
 * expanding   symbol:  JNW_TR_SKY130A/JNWTR_RPPO2.sym # of pins=3
-** sym_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO2.sym
-** sch_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO2.sch
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO2.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO2.sch
 .subckt JNWTR_RPPO2 N P B
 *.iopin P
 *.iopin N
@@ -159,8 +159,8 @@ XXA1 N P B JNWTR_RES2
 
 
 * expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym # of pins=4
-** sym_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym
-** sch_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sch
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sch
 .subckt JNWATR_PCH_12C1F2 D G S B
 *.iopin D
 *.iopin G
@@ -172,8 +172,8 @@ XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.22 W=8.32 nf=2 ad='int((nf+1)/2) * W/nf 
 
 
 * expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_12C5F0.sym # of pins=4
-** sym_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C5F0.sym
-** sch_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C5F0.sch
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C5F0.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C5F0.sch
 .subckt JNWATR_PCH_12C5F0 D G S B
 *.iopin D
 *.iopin G
@@ -185,8 +185,8 @@ XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.94 W=8.32 nf=2 ad='int((nf+1)/2) * W/nf 
 
 
 * expanding   symbol:  JNW_TR_SKY130A/JNWTR_CAPX1.sym # of pins=2
-** sym_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_CAPX1.sym
-** sch_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_CAPX1.sch
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_CAPX1.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_CAPX1.sch
 .subckt JNWTR_CAPX1 A B
 *.iopin A
 *.iopin B
@@ -195,8 +195,8 @@ XC1 B A sky130_fd_pr__cap_mim_m3_1 W=5 L=5 MF=1 m=1
 
 
 * expanding   symbol:  JNW_TR_SKY130A/JNWTR_RES4.sym # of pins=3
-** sym_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES4.sym
-** sch_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES4.sch
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES4.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES4.sch
 .subckt JNWTR_RES4 N P B
 *.iopin N
 *.iopin P
@@ -209,8 +209,8 @@ XR1_3 P INT_2 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
 
 
 * expanding   symbol:  JNW_TR_SKY130A/JNWTR_RES2.sym # of pins=3
-** sym_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES2.sym
-** sch_path: /home/georg/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES2.sch
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES2.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_TR_SKY130A/JNWTR_RES2.sch
 .subckt JNWTR_RES2 N P B
 *.iopin N
 *.iopin P
