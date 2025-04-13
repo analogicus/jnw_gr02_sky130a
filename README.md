@@ -21,7 +21,7 @@ Group2
 
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_GR02_VIS/SensorFunction.png?raw=true) 
 
-![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/AIC_MainLayout.png?raw=true)  
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/work/AIC_MainLayout.png?raw=true)  
 
 **JNW_VIS_TI - Temperature to current conversion module**  
 - First step in making the temperature sensor for AIC2025 course.  
