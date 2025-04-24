@@ -5,8 +5,8 @@ all: typical etc mc summary
 
 
 TB=tran
-VIEW=Sch
-#VIEW=Lay
+#VIEW=Sch
+VIEW=Lay
 CELL=JNW_VIS_OTA
 LIB =JNW_GR02_SKY130A
 OPT=
