@@ -21,7 +21,11 @@ Group2
 
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_GR02_VIS/SensorFunction_sch.png?raw=true)  
 
+- Simulation using extracted layout parameters:  
+
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_GR02_VIS/SensorFunction_lay.png?raw=true)  
+
+- Layout:  
 
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/Figures/AIC_MainLayout.png?raw=true)  
 
@@ -77,18 +81,24 @@ Group2
 |------------|---------|-----------|----------|------------|
 | 2.1902e+05 | -13.295 |    39.099 |    64.77 | 1.9513e+07 |  
 
-- Simulation using extracted layout parameters:
-
-|       f3db |   gm_db |   lf_gain |   pm_deg |         ug |
-|------------|---------|-----------|----------|------------|
-| 1.9778e+05 | -10.987 |    39.175 |   59.505 | 1.7769e+07 |
-
-
 - **LOOP GAIN**  
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/lstb_schgtkttttvtnosweep_loop_gain.png?raw=true)  
 
 - **LOOP PHASE**  
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/lstb_schgtkttttvtnosweep_loop_phase.png?raw=true)  
+
+- Simulation using extracted layout parameters:
+
+|       f3db |   gm_db |   lf_gain |   pm_deg |         ug |
+|------------|---------|-----------|----------|------------|
+| 1.9778e+05 | -10.987 |    39.175 |   59.505 | 1.7769e+07 |  
+
+- **LOOP GAIN**  
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/lstb_laygtkttttvtnosweep_loop_gain.png?raw=true)  
+
+- **LOOP PHASE**  
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/lstb_laygtkttttvtnosweep_loop_phase.png?raw=true)  
+
 
 - DC analysis is a bit funky, it changes with the moon phases... current doesn't really compare to the tran analysis, vref is quite similar  
 
