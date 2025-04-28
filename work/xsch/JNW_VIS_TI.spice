@@ -56,31 +56,31 @@ x16<2> I_TEMP V_MEAS3 V_MEAS6 V_MEAS6 JNWATR_PCH_4C5F0
 *.ipin VIN
 *.ipin VSS
 *.opin VOUT
-xd01<0> V2 VIP VOP VDD JNWATR_PCH_12C1F2
-xd01<1> V2 VIP VOP VDD JNWATR_PCH_12C1F2
-xd01<2> V2 VIP VOP VDD JNWATR_PCH_12C1F2
-xd01<3> V2 VIP VOP VDD JNWATR_PCH_12C1F2
-xd02<0> V1 VIN VOP VDD JNWATR_PCH_12C1F2
-xd02<1> V1 VIN VOP VDD JNWATR_PCH_12C1F2
-xd02<2> V1 VIN VOP VDD JNWATR_PCH_12C1F2
-xd02<3> V1 VIN VOP VDD JNWATR_PCH_12C1F2
-xc04 VOUT V1 VSS VSS JNWATR_NCH_12C5F0
-xc02 V2 V2 VSS VSS JNWATR_NCH_12C5F0
-xc01 net1 V2 VSS VSS JNWATR_NCH_12C5F0
-xc03 V1 V1 VSS VSS JNWATR_NCH_12C5F0
-xb02<0> VOUT net1 VDD VDD JNWATR_PCH_12C5F0
-xb02<1> VOUT net1 VDD VDD JNWATR_PCH_12C5F0
-xb02<2> VOUT net1 VDD VDD JNWATR_PCH_12C5F0
-xb02<3> VOUT net1 VDD VDD JNWATR_PCH_12C5F0
-xb01<0> net1 net1 VDD VDD JNWATR_PCH_12C5F0
-xb01<1> net1 net1 VDD VDD JNWATR_PCH_12C5F0
-xb01<2> net1 net1 VDD VDD JNWATR_PCH_12C5F0
-xb01<3> net1 net1 VDD VDD JNWATR_PCH_12C5F0
-x6 net3 net2 VSS JNWTR_RPPO2
-x8<0> VSS net3 VSS JNWTR_RPPO2
-x8<1> VSS net3 VSS JNWTR_RPPO2
-xa01 net2 net2 VDD VDD JNWATR_PCH_12C5F0
-xa02 VOP net2 VDD VDD JNWATR_PCH_12C5F0
+xh1d VOUT net2 VSS VSS JNWATR_NCH_12C5F0
+xh1b net1 net1 VSS VSS JNWATR_NCH_12C5F0
+xh1a net4 net1 VSS VSS JNWATR_NCH_12C5F0
+xh1c net2 net2 VSS VSS JNWATR_NCH_12C5F0
+xe1<0> VSS net6 VSS JNWTR_RPPO2
+xe1<1> VSS net6 VSS JNWTR_RPPO2
+xa1a net5 net5 VDD VDD JNWATR_PCH_12C5F0
+xa1b net3 net5 VDD VDD JNWATR_PCH_12C5F0
+xh1<0> net4 net4 VDD VDD JNWATR_PCH_12C5F0
+xh1<1> net4 net4 VDD VDD JNWATR_PCH_12C5F0
+xh1<2> net4 net4 VDD VDD JNWATR_PCH_12C5F0
+xh1<3> net4 net4 VDD VDD JNWATR_PCH_12C5F0
+xh2<0> VOUT net4 VDD VDD JNWATR_PCH_12C5F0
+xh2<1> VOUT net4 VDD VDD JNWATR_PCH_12C5F0
+xh2<2> VOUT net4 VDD VDD JNWATR_PCH_12C5F0
+xh2<3> VOUT net4 VDD VDD JNWATR_PCH_12C5F0
+xh3<0> net1 VIP net3 VDD JNWATR_PCH_12C1F2
+xh3<1> net1 VIP net3 VDD JNWATR_PCH_12C1F2
+xh3<2> net1 VIP net3 VDD JNWATR_PCH_12C1F2
+xh3<3> net1 VIP net3 VDD JNWATR_PCH_12C1F2
+xh4<0> net2 VIN net3 VDD JNWATR_PCH_12C1F2
+xh4<1> net2 VIN net3 VDD JNWATR_PCH_12C1F2
+xh4<2> net2 VIN net3 VDD JNWATR_PCH_12C1F2
+xh4<3> net2 VIN net3 VDD JNWATR_PCH_12C1F2
+xe2 net6 net5 VSS JNWTR_RPPO2
 .ends
 
 
@@ -158,19 +158,6 @@ XXA1 N P B JNWTR_RES2
 .ends
 
 
-* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym # of pins=4
-** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym
-** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sch
-.subckt JNWATR_PCH_12C1F2 D G S B
-*.iopin D
-*.iopin G
-*.iopin S
-*.iopin B
-XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.22 W=8.32 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
-+ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-.ends
-
-
 * expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_12C5F0.sym # of pins=4
 ** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C5F0.sym
 ** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C5F0.sch
@@ -180,6 +167,19 @@ XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.22 W=8.32 nf=2 ad='int((nf+1)/2) * W/nf 
 *.iopin S
 *.iopin B
 XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.94 W=8.32 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym # of pins=4
+** sym_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym
+** sch_path: /home/domen/pro/aicex/ip/jnw_gr02_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sch
+.subckt JNWATR_PCH_12C1F2 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.22 W=8.32 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 .ends
 
