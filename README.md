@@ -19,7 +19,9 @@ Group2
 - This is an analog solution to the temperature sensor
 - Here an Inverter based VCO is used with current starvation. Current mirrors copy the current from the JNW_VIS_TI module that is dependant on temperature, therefore less current we have the slower the inverters work and therefore there is a reduction of frequency.
 
-![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_GR02_VIS/SensorFunction.png?raw=true)  
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_GR02_VIS/SensorFunction_sch.png?raw=true)  
+
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_GR02_VIS/SensorFunction_lay.png?raw=true)  
 
 ![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/Figures/AIC_MainLayout.png?raw=true)  
 
@@ -33,28 +35,53 @@ Group2
 - For the nice plot you need to run the temp_tran_combine.py and the image will appear in the folder. It combines all simulations without Nosweep from the folder output/tran at the end.  
 - The plots show the current and v_ref done from typical, etc and mc simulation of the type tempsweep  
 
-![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/combined_plot.png?raw=true)
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/combined_plot_sch.png?raw=true)
+
+- The plots show the current and v_ref done from typical, etc and mc simulation of the type tempsweep using extracted layout parameters   
+
+![Alt text](https://github.com/analogicus/jnw_gr02_sky130a/blob/main/sim/JNW_VIS_TI/combined_plot_lay.png?raw=true)
 
 
 - Bellow is a result from the transient simulations in all the corners and the montecarlo
 
 |**Name**|**Parameter**|**Description**| |**Min**|**Typ**|**Max**| Unit|
 |:---|:---|:---|---:|:---:|:---:|:---:| ---:|
-|**Referance Voltage**|**vref27** || **Spec**  | **0.90000** | **1.20000** | **1.50000** | **V** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.20066 |  | |
-| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|1.19779 | 1.20082 | 1.20342 | |
-| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|1.07695 | 1.20448 | 1.33201 | |
-|**Temperature current**|**i\_temp27** || **Spec**  | **3.00000** | **4.00000** | **5.00000** | **uA** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 3.98492 |  | |
-| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|3.42394 | 3.97680 | 4.64859 | |
-| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|3.07677 | 4.00629 | 4.93581 | |
+|**Reference Voltage**|**vref27**||**Spec**|**0.90000**|**1.20000**|**1.50000**|**V**|
+| | | |[results/tran_Sch_typical.html](results/tran_Sch_typical.html)| |1.20066| | |
+| | | |[results/tran_Sch_etc.html](results/tran_Sch_etc.html)|1.19779|1.20082|1.20342| |
+| | | |[results/tran_Sch_mc.html](results/tran_Sch_mc.html)|1.07695|1.20448|1.33201| |
+|**Temperature current**|**i_temp27**||**Spec**|**3.00000**|**4.00000**|**5.00000**|**uA**|
+| | | |[results/tran_Sch_typical.html](results/tran_Sch_typical.html)| |3.98492| | |
+| | | |[results/tran_Sch_etc.html](results/tran_Sch_etc.html)|3.42394|3.97680|4.64859| |
+| | | |[results/tran_Sch_mc.html](results/tran_Sch_mc.html)|3.07677|4.00629|4.93581| |  
+
+- Simulation using extracted layout parameters, it sadly fails in the monte carlo simulation  
+
+|**Name**|**Parameter**|**Description**| |**Min**|**Typ**|**Max**| Unit|
+|:---|:---|:---|---:|:---:|:---:|:---:| ---:|
+|**Reference Voltage**|**vref27**||**Spec**|**0.90000**|**1.20000**|**1.50000**|**V**|
+| | | |[results/tran_Lay_typical.html](results/tran_Lay_typical.html)| |1.19532| | |
+| | | |[results/tran_Lay_etc.html](results/tran_Lay_etc.html)|1.19194|1.19546|1.19891| |
+| | | |[results/tran_Lay_mc.html](results/tran_Lay_mc.html)|1.01666|1.18908|1.36151| |
+|**Temperature current**|**i_temp27**||**Spec**|**3.00000**|**4.00000**|**5.00000**|**uA**|
+| | | |[results/tran_Lay_typical.html](results/tran_Lay_typical.html)| |3.83907| | |
+| | | |[results/tran_Lay_etc.html](results/tran_Lay_etc.html)|3.29567|3.83206|4.48719| |
+| | | |[results/tran_Lay_mc.html](results/tran_Lay_mc.html)|<span style='color:red'>**2.61824**</span>|3.82743|<span style='color:red'>**5.03663**</span>| |
+
+
 
 
 - Bellow are the plots and data of stability analysis  
 
 |       f3db |   gm_db |   lf_gain |   pm_deg |         ug |
 |------------|---------|-----------|----------|------------|
-| 2.1902e+05 | -13.295 |    39.099 |    64.77 | 1.9513e+07 |
+| 2.1902e+05 | -13.295 |    39.099 |    64.77 | 1.9513e+07 |  
+
+- Simulation using extracted layout parameters:
+
+|       f3db |   gm_db |   lf_gain |   pm_deg |         ug |
+|------------|---------|-----------|----------|------------|
+| 1.9778e+05 | -10.987 |    39.175 |   59.505 | 1.7769e+07 |
 
 
 - **LOOP GAIN**  
@@ -68,13 +95,23 @@ Group2
 **JNW_VIS_OTA**  
 - Current mirror OTA  
 - Special care was taken to reduce the offset, especially during the etc and mc simulation, because it causes big problems in the workings of the main circuit  
-
+  
+- Schematic simulation
 |**Name**|**Parameter**|**Description**| |**Min**|**Typ**|**Max**| Unit|
 |:---|:---|:---|---:|:---:|:---:|:---:| ---:|
 ||**offset** || **Spec**  | **-50.000** | **0.000** | **50.000** | **mV** |
 | | | | [Sch_typ](results/tran_Sch_typical.html) | | 0.772 |  | |
 | | | | [Sch_etc](results/tran_Sch_etc.html) | -0.978 | 0.880 | 3.383 | |
 | | | | [Sch_3std](results/tran_Sch_mc.html) | -15.165 | 1.743 | 18.650 | |
+  
+
+- Simulation using extracted layout parameters
+|**Name**|**Parameter**|**Description**| |**Min**|**Typ**|**Max**| Unit|
+|:---|:---|:---|---:|:---:|:---:|:---:| ---:|
+||**offset** || **Spec**  | **-50.000** | **0.000** | **50.000** | **mV** |
+| | | | [Sch_typ](results/tran_Lay_typical.html) | | 0.772 |  | |
+| | | | [Sch_etc](results/tran_Lay_etc.html) |-0.978 | 0.880 | 3.383 | |
+| | | | [Sch_3std](results/tran_Lay_mc.html) |-17.639 | 0.098 | 17.836 | |
 
 
 **JNW_VIS_ITIME - Current to time conversion module**  

@@ -14,7 +14,7 @@ curve_labels_vref = []    # Store labels for vref curves
 # Iterate over files in the folder
 for filename in os.listdir(folder_path):
     # Check if the file is a .yaml file and does not contain "Nosweep"
-    if filename.endswith(".yaml") and "Nosweep" not in filename:
+    if filename.endswith(".yaml") and "Nosweep" not in filename and "Lay" in filename: # remove the last and for non layout plotting
         # Construct the full path to the file
         yamlfile = os.path.join(folder_path, filename)
 

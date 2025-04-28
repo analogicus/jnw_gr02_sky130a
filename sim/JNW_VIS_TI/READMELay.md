@@ -26,11 +26,11 @@ Check transient operation
 |**Name**|**Parameter**|**Description**| |**Min**|**Typ**|**Max**| Unit|
 |:---|:---|:---|---:|:---:|:---:|:---:| ---:|
 |**Referance Voltage**|**vref27** || **Spec**  | **0.90000** | **1.20000** | **1.50000** | **V** |
-| | | |<a href='results/tran_Lay_typical.html'>Lay_typ</a>| | 1.19532 |  | |
-| | | |<a href='results/tran_Lay_etc.html'>Lay_etc</a>|1.19194 | 1.19546 | 1.19891 | |
-| | | |<a href='results/tran_Lay_mc.html'>Lay_3std</a>|1.01666 | 1.18908 | 1.36151 | |
+| | | |<a href='results/tran_Lay_typical.html'>Lay_typ</a>| | 1.19531 |  | |
+| | | |<a href='results/tran_Lay_etc.html'>Lay_etc</a>|1.19195 | 1.19546 | 1.19891 | |
+| | | |<a href='results/tran_Lay_mc.html'>Lay_3std</a>|0.99423 | 1.20512 | 1.41601 | |
 |**Temperature current**|**i\_temp27** || **Spec**  | **3.00000** | **4.00000** | **5.00000** | **uA** |
-| | | |<a href='results/tran_Lay_typical.html'>Lay_typ</a>| | 3.83907 |  | |
-| | | |<a href='results/tran_Lay_etc.html'>Lay_etc</a>|3.29567 | 3.83206 | 4.48719 | |
-| | | |<a href='results/tran_Lay_mc.html'>Lay_3std</a>|<span style='color:red'>**2.61824**</span> | 3.82743 | <span style='color:red'>**5.03663**</span> | |
+| | | |<a href='results/tran_Lay_typical.html'>Lay_typ</a>| | 3.83903 |  | |
+| | | |<a href='results/tran_Lay_etc.html'>Lay_etc</a>|3.29571 | 3.83206 | 4.48719 | |
+| | | |<a href='results/tran_Lay_mc.html'>Lay_3std</a>|<span style='color:red'>**2.52033**</span> | 3.87374 | <span style='color:red'>**5.22715**</span> | |
 
