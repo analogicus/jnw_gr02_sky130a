@@ -1,10 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1745877762
-<< error_s >>
-rect 17138 -15090 17148 -14990
-rect 17218 -15090 17228 -14990
+timestamp 1745878851
 << dnwell >>
 rect 27560 -11240 34040 440
 << nwell >>
@@ -319,77 +316,76 @@ rect 32321 -9245 32471 -3695
 rect 29982 -9395 29983 -9245
 rect 30131 -9395 32471 -9245
 rect 29982 -9396 30132 -9395
-rect 17030 -15090 17330 -14990
 use JNWTR_CAPX1  JNWTR_CAPX1_0 ../JNW_TR_SKY130A
-timestamp 1745877762
+timestamp 1745878851
 transform 0 1 31636 1 0 -9720
 box 0 0 1080 1080
 use JNWTR_IVX4_CV  JNWTR_IVX4_CV_0 ../JNW_TR_SKY130A
-timestamp 1745877762
+timestamp 1745878851
 transform 1 0 29086 0 1 -8680
 box -150 -120 2130 920
 use JNWTR_IVX4_CV  JNWTR_IVX4_CV_1
-timestamp 1745877762
+timestamp 1745878851
 transform 1 0 29086 0 1 -4380
 box -150 -120 2130 920
 use JNWTR_IVX4_CV  JNWTR_IVX4_CV_2
-timestamp 1745877762
+timestamp 1745878851
 transform 1 0 29086 0 1 -7180
 box -150 -120 2130 920
 use JNWTR_IVX4_CV  JNWTR_IVX4_CV_3
-timestamp 1745877762
+timestamp 1745878851
 transform 1 0 29086 0 1 -5880
 box -150 -120 2130 920
 use JNWTR_IVX4_CV  JNWTR_IVX4_CV_4
-timestamp 1745877762
+timestamp 1745878851
 transform 1 0 29086 0 1 -2980
 box -150 -120 2130 920
 use JNW_VIS_TI  x2 ../JNW_GR02_SKY130A
-timestamp 1745877762
+timestamp 1745878851
 transform 1 0 14388 0 1 1400
 box -9344 -19400 9900 -2398
 use JNWTR_CAPX1  x7
-timestamp 1745877762
+timestamp 1745878851
 transform 0 -1 32716 1 0 -3800
 box 0 0 1080 1080
 use JNWATR_NCH_8C1F2  x8 ../JNW_ATR_SKY130A
-timestamp 1745877762
+timestamp 1745878851
 transform 1 0 24784 0 1 -7072
 box -184 -128 1592 928
 use JNWATR_NCH_12C1F2  x9 ../JNW_ATR_SKY130A
-timestamp 1745877762
+timestamp 1745878851
 transform 1 0 24784 0 1 -5072
 box -184 -128 1848 928
 use JNWTR_IVX4_CV  x10
-timestamp 1745877762
+timestamp 1745878851
 transform 1 0 35286 0 1 -3080
 box -150 -120 2130 920
 use JNWATR_NCH_8C1F2  x11
-timestamp 1745877762
+timestamp 1745878851
 transform 1 0 24784 0 1 -6272
 box -184 -128 1592 928
 use JNWATR_PCH_12C1F2  x12 ../JNW_ATR_SKY130A
-timestamp 1745877762
+timestamp 1745878851
 transform 1 0 24784 0 1 -3672
 box -184 -128 1848 928
 use JNWATR_PCH_12C1F2  x13
-timestamp 1745877762
+timestamp 1745878851
 transform 1 0 24784 0 1 -2872
 box -184 -128 1848 928
 use JNWTR_IVX4_CV  x14
-timestamp 1745877762
+timestamp 1745878851
 transform 1 0 35286 0 1 -4420
 box -150 -120 2130 920
 use JNWTR_CAPX1  x15
-timestamp 1745877762
+timestamp 1745878851
 transform 0 -1 32716 1 0 -5300
 box 0 0 1080 1080
 use JNWTR_CAPX1  x16
-timestamp 1745877762
+timestamp 1745878851
 transform 0 -1 32716 1 0 -6800
 box 0 0 1080 1080
 use JNWTR_CAPX1  x17
-timestamp 1745877762
+timestamp 1745878851
 transform 0 -1 32716 1 0 -8300
 box 0 0 1080 1080
 << labels >>
