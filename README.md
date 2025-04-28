@@ -47,26 +47,26 @@ Group2
 |**Name**|**Parameter**|**Description**| |**Min**|**Typ**|**Max**| Unit|
 |:---|:---|:---|---:|:---:|:---:|:---:| ---:|
 |**Reference Voltage**|**vref27**||**Spec**|**0.90000**|**1.20000**|**1.50000**|**V**|
-| | | |[results/tran_Sch_typical.html](results/tran_Sch_typical.html)| |1.20066| | |
-| | | |[results/tran_Sch_etc.html](results/tran_Sch_etc.html)|1.19779|1.20082|1.20342| |
-| | | |[results/tran_Sch_mc.html](results/tran_Sch_mc.html)|1.07695|1.20448|1.33201| |
+| | | |[Sch_typ](results/tran_Sch_typical.html)| |1.20066| | |
+| | | |[Sch_etc](results/tran_Sch_etc.html)|1.19779|1.20082|1.20342| |
+| | | |[Sch_mc](results/tran_Sch_mc.html)|1.07695|1.20448|1.33201| |
 |**Temperature current**|**i_temp27**||**Spec**|**3.00000**|**4.00000**|**5.00000**|**uA**|
-| | | |[results/tran_Sch_typical.html](results/tran_Sch_typical.html)| |3.98492| | |
-| | | |[results/tran_Sch_etc.html](results/tran_Sch_etc.html)|3.42394|3.97680|4.64859| |
-| | | |[results/tran_Sch_mc.html](results/tran_Sch_mc.html)|3.07677|4.00629|4.93581| |  
+| | | |[Sch_typ](results/tran_Sch_typical.html)| |3.98492| | |
+| | | |[Sch_etc](results/tran_Sch_etc.html)|3.42394|3.97680|4.64859| |
+| | | |[Sch_mc](results/tran_Sch_mc.html)|3.07677|4.00629|4.93581| |  
 
 - Simulation using extracted layout parameters, it sadly fails in the monte carlo simulation  
 
 |**Name**|**Parameter**|**Description**| |**Min**|**Typ**|**Max**| Unit|
 |:---|:---|:---|---:|:---:|:---:|:---:| ---:|
 |**Reference Voltage**|**vref27**||**Spec**|**0.90000**|**1.20000**|**1.50000**|**V**|
-| | | |[results/tran_Lay_typical.html](results/tran_Lay_typical.html)| |1.19532| | |
-| | | |[results/tran_Lay_etc.html](results/tran_Lay_etc.html)|1.19194|1.19546|1.19891| |
-| | | |[results/tran_Lay_mc.html](results/tran_Lay_mc.html)|1.01666|1.18908|1.36151| |
+| | | |[Lay_typ](results/tran_Lay_typical.html)| |1.19532| | |
+| | | |[Lay_etc](results/tran_Lay_etc.html)|1.19194|1.19546|1.19891| |
+| | | |[Lay_mc](results/tran_Lay_mc.html)|1.01666|1.18908|1.36151| |
 |**Temperature current**|**i_temp27**||**Spec**|**3.00000**|**4.00000**|**5.00000**|**uA**|
-| | | |[results/tran_Lay_typical.html](results/tran_Lay_typical.html)| |3.83907| | |
-| | | |[results/tran_Lay_etc.html](results/tran_Lay_etc.html)|3.29567|3.83206|4.48719| |
-| | | |[results/tran_Lay_mc.html](results/tran_Lay_mc.html)|<span style='color:red'>**2.61824**</span>|3.82743|<span style='color:red'>**5.03663**</span>| |
+| | | |[Lay_typ](results/tran_Lay_typical.html)| |3.83907| | |
+| | | |[Lay_etc](results/tran_Lay_etc.html)|3.29567|3.83206|4.48719| |
+| | | |[Lay_mc](results/tran_Lay_mc.html)|<span style='color:red'>**2.61824**</span>|3.82743|<span style='color:red'>**5.03663**</span>| |
 
 
 
@@ -96,7 +96,8 @@ Group2
 - Current mirror OTA  
 - Special care was taken to reduce the offset, especially during the etc and mc simulation, because it causes big problems in the workings of the main circuit  
   
-- Schematic simulation
+- Schematic simulation  
+
 |**Name**|**Parameter**|**Description**| |**Min**|**Typ**|**Max**| Unit|
 |:---|:---|:---|---:|:---:|:---:|:---:| ---:|
 ||**offset** || **Spec**  | **-50.000** | **0.000** | **50.000** | **mV** |
@@ -105,7 +106,8 @@ Group2
 | | | | [Sch_3std](results/tran_Sch_mc.html) | -15.165 | 1.743 | 18.650 | |
   
 
-- Simulation using extracted layout parameters
+- Simulation using extracted layout parameters  
+
 |**Name**|**Parameter**|**Description**| |**Min**|**Typ**|**Max**| Unit|
 |:---|:---|:---|---:|:---:|:---:|:---:| ---:|
 ||**offset** || **Spec**  | **-50.000** | **0.000** | **50.000** | **mV** |
