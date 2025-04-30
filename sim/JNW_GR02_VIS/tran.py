@@ -30,6 +30,8 @@ def main(name):
 
   print(tdiff_data)
   freq = np.divide(1, tdiff_data)
+  print("")
+  print(freq)
 
 
   plt.figure(figsize=(10, 6))

@@ -15,7 +15,9 @@ LIB=JNW_GR02_SKY130A
 CELL=JNW_GR02_VIS#JNW_GR02_VIS
 
 #- Provide cells you want to check for the lvsall drcall commands
-CELLS = JNW_GR02_VIS
+CELLS = JNW_GR02_VIS JNW_VIS_TI JNW_VIS_OTA
+
+
 
 include ../tech/make/core.make
 #include ./core_vis.make
